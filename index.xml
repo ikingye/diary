@@ -31,16 +31,6 @@
     </item>
     
     <item>
-      <title>2020-03-09</title>
-      <link>https://ikingye.github.io/diary/docs/2020/03/09/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/diary/docs/2020/03/09/</guid>
-      <description>2020 年 3 月 9 日 今日代办  xxx   今日记事  今日总结 略
- </description>
-    </item>
-    
-    <item>
       <title>2020-03-08</title>
       <link>https://ikingye.github.io/diary/docs/2020/03/08/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -55,6 +45,19 @@
 参考：官网 1.5 change note
 可扩展性的新模型 Istio 一直是最可扩展的服务网格，其 Mixer 插件允许自定义策略和遥测支持，而 Envoy 扩展则允许数据平面自定义。Istio 1.5 带来了了一个新模型，该模型使用 WebAssembly（Wasm）将 Istio 的可扩展性模型与 Envoy 的统一。Wasm 使开发人员能够安全地在 Envoy 代理中分发和执行代码，以便与遥测系统和策略系统集成，并控制路由，甚至转换消息正文。它将更加灵活和高效，从而无需单独运行 Mixer 组件（这也简化了部署）。
 更容易使用 现在，使用 istioctl 的 Istio 命令行安装已进入 beta 阶段。istioctl 也有十几项改进，包括分析新项目、更好的验证规则，以及更好的与 CI 系统集成的能力等。它已经成为了解 Istio 的系统运行状态并确保配置更改安全的必要工具。</description>
+    </item>
+    
+    <item>
+      <title>2020-04-02</title>
+      <link>https://ikingye.github.io/diary/docs/2020/04/02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/diary/docs/2020/04/02/</guid>
+      <description>2020 年 4 月 2 日 今日代办     今日记事 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
+安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
+运行 Bookinfo sample application kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml kubectl get services 一切顺利，输出 service list。
+过了一会，报错，连不上 server
+The connection to the server 192.168.99.100:8443 was refused - did you specify the right host or port? minikube status minikube start --image-mirror-country=&amp;#39;cn&amp;#39; --registry-mirror=https://registry.docker-cn.com  今日总结 略</description>
     </item>
     
   </channel>
