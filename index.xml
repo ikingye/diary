@@ -48,16 +48,28 @@
     </item>
     
     <item>
+      <title>2020-04-03</title>
+      <link>https://ikingye.github.io/diary/docs/2020/04/03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/diary/docs/2020/04/03/</guid>
+      <description>2020 年 4 月 3 日 今日代办     编程 Bookinfo Application 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
+运行 Bookinfo sample application alias k=&amp;#34;kubectl&amp;#34; k apply -f samples/bookinfo/platform/kube/bookinfo.yaml k get services 查看 Bookinfo 应用是否正常
+by checking for the page title in the response
+kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath=&amp;#39;{.items[0].metadata.name}&amp;#39;) -c ratings -- curl productpage:9080/productpage | grep -o &amp;#34;&amp;lt;title&amp;gt;.</description>
+    </item>
+    
+    <item>
       <title>2020-04-02</title>
       <link>https://ikingye.github.io/diary/docs/2020/04/02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/02/</guid>
-      <description>2020 年 4 月 2 日 今日代办     今日记事 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
+      <description>2020 年 4 月 2 日 今日代办     试用 Istio 1.5 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
 运行 Bookinfo sample application kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml kubectl get services 一切顺利，输出 service list。
 过了一会，报错，连不上 server
-The connection to the server 192.168.99.100:8443 was refused - did you specify the right host or port? minikube status minikube start --image-mirror-country=&amp;#39;cn&amp;#39; --registry-mirror=https://registry.docker-cn.com  今日总结 略</description>
+The connection to the server 192.168.99.100:8443 was refused - did you specify the right host or port? minikube status minikube start --image-mirror-country=&amp;#39;cn&amp;#39; --registry-mirror=https://registry.</description>
     </item>
     
   </channel>
