@@ -13,7 +13,7 @@
 # 创建一个 VM, 1GB 内存和 5GB 磁盘 multipass launch --name k3s --mem 1G --disk 5G # 为 VM 启动一个 shell multipass shell k3s # 在其上安装 k3s curl -sfL https://get.k3s.io | sh – 使用 netlify 部署 gitbook 参考：A Step-by-Step Guide: GitBook on Netlify" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/07/" />
-<meta property="article:modified_time" content="2020-04-07T18:10:58+08:00" />
+<meta property="article:modified_time" content="2020-04-07T20:02:05+08:00" />
 <title>2020-04-07 | 叶王日记</title>
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/diary/en.search.min.aeae51ea89d0204a1066e1879bf26e437b670dcc4bf30af90e6b910e74917f59.js" integrity="sha256-rq5R6onQIEoQZuGHm/JuQ3tnDcxL8wr5DmuRDnSRf1k="></script>
+<script defer src="/diary/en.search.min.fa88f8f7fd2069142b39bd008a804e2558c0498ba8b074a190b35153433bd2f4.js" integrity="sha256-&#43;oj49/0gaRQrOb0AioBOJVjASYuosHShkLNRU0M70vQ="></script>
 
 <!--
 Made with Book Theme
@@ -270,6 +270,15 @@ https://github.com/alex-shpak/hugo-book
             </li>
             <li><a href="#-netlify--gitbook">使用 netlify 部署 gitbook</a></li>
             <li><a href="#-netlify--pr">使用 netlify 持续部署 PR</a></li>
+            <li><a href="#vps">VPS</a>
+              <ul>
+                <li><a href="#ubuntu-">Ubuntu 开源镜像</a></li>
+                <li><a href="#oh-my-zsh">oh-my-zsh</a></li>
+                <li><a href="#zsh-prompt">zsh prompt</a></li>
+                <li><a href="#-zsh">设置默认为 zsh</a></li>
+              </ul>
+            </li>
+            <li><a href="#rancherfleethttpsgithubcomrancherfleet-httpsimgshieldsiogithubstarsrancherfleetsvg">rancher/fleet </a></li>
           </ul>
         </li>
         <li><a href="#heading-3">今日总结</a></li>
@@ -316,6 +325,24 @@ curl -sfL https://get.k3s.io | sh –
 <p>最后一步使用 <code>npm install -g gitbook-cli &amp;&amp; gitbook install &amp;&amp; gitbook build</code></p>
 <h3 id="-netlify--pr">使用 netlify 持续部署 PR</h3>
 <p>参考：<a href="https://github.com/levy9527/blog/issues/4">Github 集成 Netlify：快速预览 PR</a></p>
+<h3 id="vps">VPS</h3>
+<h4 id="ubuntu-">Ubuntu 开源镜像</h4>
+<ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华开源镜像</a></li>
+<li><a href="https://developer.aliyun.com/mirror/">阿里巴巴开源镜像</a>
+<ul>
+<li><a href="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11SASi2i">Ubuntu</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="oh-my-zsh">oh-my-zsh</h4>
+<p><a href="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh">https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh</a></p>
+<h4 id="zsh-prompt">zsh prompt</h4>
+<pre><code>export PROMPT='%{$fg[magenta]%}%(?..%?%1v)%n@%{$fg[green]%}%M:%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+</code></pre><h4 id="-zsh">设置默认为 zsh</h4>
+<pre><code>sudo chsh -s /usr/bin/zsh ubuntu
+</code></pre><h3 id="rancherfleethttpsgithubcomrancherfleet-httpsimgshieldsiogithubstarsrancherfleetsvg"><a href="https://github.com/rancher/fleet">rancher/fleet</a> <img src="https://img.shields.io/github/stars/rancher/fleet.svg" alt=""></h3>
+<p><a href="https://blog.csdn.net/RancherLabs/article/details/105358499">Rancher 开源 Fleet：业界首个海量 K8S 集群管理项目</a></p>
 <hr>
 <h2 id="heading-3">今日总结</h2>
 <p>略</p>
@@ -331,7 +358,7 @@ curl -sfL https://get.k3s.io | sh –
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/97d7ec9ae56cad5d936072ce810ed82622d55372" title='Last modified by yewang | 2020-04-07' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/f957486396dca4c8bb11ba35c2f4daee41e16e8a" title='Last modified by yewang | 2020-04-07' target="_blank" rel="noopener">
       <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-07</span>
     </a>
@@ -384,6 +411,15 @@ curl -sfL https://get.k3s.io | sh –
             </li>
             <li><a href="#-netlify--gitbook">使用 netlify 部署 gitbook</a></li>
             <li><a href="#-netlify--pr">使用 netlify 持续部署 PR</a></li>
+            <li><a href="#vps">VPS</a>
+              <ul>
+                <li><a href="#ubuntu-">Ubuntu 开源镜像</a></li>
+                <li><a href="#oh-my-zsh">oh-my-zsh</a></li>
+                <li><a href="#zsh-prompt">zsh prompt</a></li>
+                <li><a href="#-zsh">设置默认为 zsh</a></li>
+              </ul>
+            </li>
+            <li><a href="#rancherfleethttpsgithubcomrancherfleet-httpsimgshieldsiogithubstarsrancherfleetsvg">rancher/fleet </a></li>
           </ul>
         </li>
         <li><a href="#heading-3">今日总结</a></li>
