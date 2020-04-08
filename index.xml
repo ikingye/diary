@@ -52,8 +52,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/08/</guid>
-      <description>2020 年 4 月 8 日（星期三） 今日待办     编程 RTSP Real Time Streaming Protocol
- 今日总结 </description>
+      <description>2020 年 4 月 8 日（星期三） 今日待办     编程 依赖注入 可以通过多种方式为实例提供必要的依赖关系：
+ 构造函数注入 属性注入 方法注入  构造函数注入 构造函数注入是许多依赖注入框架的首选方法，常受依赖注入框架的青睐。
+它清楚地告诉我们创建特定组件所需的所有依赖关系，并且这些依赖不是可选的，这些依赖关系在整个组件中应该都是必需的。
+public class DataProcessor { private final DbManager manager; private final Calculator calculator; public DataProcessor(DbManager manager, Calculator calculator) { this.manager = manager; this.calculator = calculator; } // ... }  优点：  不变性：依赖关系始终如初。   缺点  必须在初始化时提供所有依赖项。  有时，我们无法自己初始化一个组件，或者在某个时刻我们无法提供组件的所有依赖关系。或者我们需要使用另外一个构造函数。一旦设置了依赖项，我们就无法再改变它们了。      属性注入 属性注入更适合可选参数，例如监听或委托。又或是我们无法在初始化时提供依赖关系。
+其它编程语言，例如 Swift，大量使用了带属性的 委托模式。因此，使用属性注入将使其它语言的开发人员更熟悉我们的代码。</description>
     </item>
     
     <item>
