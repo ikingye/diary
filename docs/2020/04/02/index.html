@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="2020-04-02"><meta property="og:title" content="2020-04-02" />
-<meta property="og:description" content="2020 年 4 月 2 日 今日代办     试用 Istio 1.5 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
+<meta property="og:description" content="2020 年 4 月 2 日 今日待办     编程 Istio 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
 运行 Bookinfo sample application kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml kubectl get services 一切顺利，输出 service list。
 过了一会，报错，连不上 server
 The connection to the server 192.168.99.100:8443 was refused - did you specify the right host or port? minikube status minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/02/" />
-<meta property="article:modified_time" content="2020-04-03T14:38:06+08:00" />
+<meta property="article:modified_time" content="2020-04-08T11:24:08+08:00" />
 <title>2020-04-02 | 叶王日记</title>
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
@@ -20,7 +20,7 @@ The connection to the server 192.168.99.100:8443 was refused - did you specify t
 <link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/diary/en.search.min.15d89108f72be5ef3639c2683885908eba87807442b05b800e284ea1127b9531.js" integrity="sha256-FdiRCPcr5e82OcJoOIWQjrqHgHRCsFuADihOoRJ7lTE="></script>
+<script defer src="/diary/en.search.min.8bafbd311a275a23d1a2fdce5e0e8a67cf3f95d7e5401cf247d0431a812ad566.js" integrity="sha256-i6&#43;9MRonWiPRov3OXg6KZ88/ldflQBzyR9BDGoEq1WY="></script>
 
 <!--
 Made with Book Theme
@@ -120,6 +120,16 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/08/" >
+      2020-04-08
+  </a>
+
+</li>
+      
     
       
         <li>
@@ -254,18 +264,20 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#2020--4--2-">2020 年 4 月 2 日</a>
       <ul>
-        <li><a href="#heading">今日代办</a></li>
-        <li><a href="#-istio-15">试用 Istio 1.5</a>
+        <li><a href="#heading">今日待办</a></li>
+        <li><a href="#heading-1">编程</a>
           <ul>
-            <li><a href="#-minikube">安装 minikube</a></li>
-            <li><a href="#-istio">安装 istio</a></li>
-            <li><a href="#-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 Bookinfo sample application</a></li>
-            <li><a href="#--server">解决 连不上 server</a></li>
-            <li><a href="#heading-1">又出现错误</a></li>
+            <li><a href="#istio">Istio</a>
+              <ul>
+                <li><a href="#-minikube">安装 minikube</a></li>
+                <li><a href="#-istio">安装 istio</a></li>
+                <li><a href="#-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 Bookinfo sample application</a></li>
+                <li><a href="#--server">解决 连不上 server</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><a href="#heading-2">今日总结</a></li>
-        <li><a href="#heading-3">参考</a></li>
       </ul>
     </li>
   </ul>
@@ -280,21 +292,22 @@ https://github.com/alex-shpak/hugo-book
       
       
 <article class="markdown"><h1 id="2020--4--2-">2020 年 4 月 2 日</h1>
-<h2 id="heading">今日代办</h2>
+<h2 id="heading">今日待办</h2>
 <ul>
 <li><input disabled="" type="checkbox"></li>
 </ul>
 <hr>
-<h2 id="-istio-15">试用 Istio 1.5</h2>
-<h3 id="-minikube">安装 minikube</h3>
+<h2 id="heading-1">编程</h2>
+<h3 id="istio">Istio</h3>
+<h4 id="-minikube">安装 minikube</h4>
 <p><code>minikube start --image-mirror-country='cn' --registry-mirror=https://registry.docker-cn.com</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200402172243.png" alt=""></p>
-<h3 id="-istio">安装 istio</h3>
+<h4 id="-istio">安装 istio</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">istioctl manifest apply --set profile<span style="color:#f92672">=</span>demo
 
 kubectl label namespace default istio-injection<span style="color:#f92672">=</span>enabled
 </code></pre></div><p>参考：<a href="https://istio.io/docs/setup/getting-started/">https://istio.io/docs/setup/getting-started/</a></p>
-<h3 id="-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 <a href="https://istio.io/docs/examples/bookinfo/">Bookinfo sample application</a></h3>
+<h4 id="-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 <a href="https://istio.io/docs/examples/bookinfo/">Bookinfo sample application</a></h4>
 <pre><code>kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 
 kubectl get services
@@ -306,11 +319,12 @@ kubectl get services
 
 minikube start --image-mirror-country<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cn&#39;</span>  --registry-mirror<span style="color:#f92672">=</span>https://registry.docker-cn.com
 </code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200402183102.png" alt=""></p>
-<h3 id="--server">解决 连不上 server</h3>
+<h4 id="--server">解决 连不上 server</h4>
 <p>删除：
 <code>minikube delete</code></p>
 <p>重新 start</p>
-<h3 id="heading-1">又出现错误</h3>
+<hr>
+<p>过一会又出现错误</p>
 <pre><code>The connection to the server 192.168.99.101:8443 was refused - did you specify the right host or port?
 </code></pre><p>还是切换会 Docker Desktop 版本的 Kubernetes 吧。。。</p>
 <p>使用
@@ -320,9 +334,9 @@ minikube start --image-mirror-country<span style="color:#f92672">=</span><span s
 通过 <code>load_images.sh</code> 将所需镜像从 Docker Hub 的同步仓库中取回，并重新打上原始的 tag。</p>
 <hr>
 <h2 id="heading-2">今日总结</h2>
-<p>略</p>
-<hr>
-<h2 id="heading-3">参考</h2>
+<ul>
+<li>MacOS 还是使用 Docker Desktop 的 K8s，Minikube 不好用</li>
+</ul>
 </article>
  
       
@@ -335,9 +349,9 @@ minikube start --image-mirror-country<span style="color:#f92672">=</span><span s
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/1aec97b6ebd8a7f61d3e21b3f4385b0d58e62e56" title='Last modified by yewang | 2020-04-03' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/4e97976baa2336201c24b50388718122163b9e0f" title='Last modified by yewang | 2020-04-08' target="_blank" rel="noopener">
       <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-03</span>
+      <span>2020-04-08</span>
     </a>
   </div>
 
@@ -373,18 +387,20 @@ minikube start --image-mirror-country<span style="color:#f92672">=</span><span s
   <ul>
     <li><a href="#2020--4--2-">2020 年 4 月 2 日</a>
       <ul>
-        <li><a href="#heading">今日代办</a></li>
-        <li><a href="#-istio-15">试用 Istio 1.5</a>
+        <li><a href="#heading">今日待办</a></li>
+        <li><a href="#heading-1">编程</a>
           <ul>
-            <li><a href="#-minikube">安装 minikube</a></li>
-            <li><a href="#-istio">安装 istio</a></li>
-            <li><a href="#-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 Bookinfo sample application</a></li>
-            <li><a href="#--server">解决 连不上 server</a></li>
-            <li><a href="#heading-1">又出现错误</a></li>
+            <li><a href="#istio">Istio</a>
+              <ul>
+                <li><a href="#-minikube">安装 minikube</a></li>
+                <li><a href="#-istio">安装 istio</a></li>
+                <li><a href="#-bookinfo-sample-applicationhttpsistioiodocsexamplesbookinfo">运行 Bookinfo sample application</a></li>
+                <li><a href="#--server">解决 连不上 server</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><a href="#heading-2">今日总结</a></li>
-        <li><a href="#heading-3">参考</a></li>
       </ul>
     </li>
   </ul>

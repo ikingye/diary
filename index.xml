@@ -15,7 +15,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/03/31/</guid>
-      <description>2020 年 3 月 31 日 今日代办  xxx   今日记事 内卷化（网络）  靠极端剥削、压榨自己，从而在社会获得少量的竞争优势 明明可以有更加轻松，效果还更好的选择，却仍旧在旧有的选择中不断投入各类资源，以及由此产生的各种现象 不改变生产方式，不提高技术水平，而是靠极端剥削、压榨本国的劳动力在国际市场获得竞争优势  举一个很简单的例子：
+      <description>2020 年 3 月 31 日 今日待办  xxx   语言 滥觞 lànshāng 浮起酒杯。喻事情的开始
+夫江始出于岷山,其源可以滥觞。——《孔子家语·三恕》
+政史地 内卷化（网络）  靠极端剥削、压榨自己，从而在社会获得少量的竞争优势 明明可以有更加轻松，效果还更好的选择，却仍旧在旧有的选择中不断投入各类资源，以及由此产生的各种现象 不改变生产方式，不提高技术水平，而是靠极端剥削、压榨本国的劳动力在国际市场获得竞争优势  举一个很简单的例子：
 假定某省考生数量，录取名额不变，即录取率不变。
 现在有一所学校，甲校要求高中生每天学习 14 个小时，寒暑假和双休日补课。这一操作的效果是在短期内提高了甲校的录取率。
 这种录取率提升的甜头让乙、丙、丁校羡慕，于是均决定向甲校学习，推行甲校的教学管理模式。
@@ -36,12 +38,22 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/03/08/</guid>
-      <description>2020 年 3 月 8 日 今日代办  陪闵子玩 Istio 1.5 发布了，学习一个   今日记事 陪闵子玩  大部分时间，她还是像以往一样，对着小度播的儿歌，左右摇摆  闵子现在挺会跳了 下午陪闵子画画（乱画）  闵子很喜欢笑，笑起来很可爱，像她妈妈    学习算法 今天看到一个算法教程还不错，推荐一下，labuladong 的算法小抄。
- 学习 Istio 1.5 Istio 1.5 于 2020-03-05 发布了。
+      <description>2020 年 3 月 8 日 今日待办  陪闵子玩 Istio 1.5 发布了，学习一个   生活 陪闵子玩  大部分时间，她还是像以往一样，对着小度播的儿歌，左右摇摆  闵子现在挺会跳了 下午陪闵子画画（乱画）  闵子很喜欢笑，笑起来很可爱，像她妈妈    编程 算法教程 今天看到一个算法教程还不错，推荐一下，labuladong 的算法小抄。
+ Istio 1.5 Istio 1.5 于 2020-03-05 发布了。
 引入 Istiod 将控制平面整合为一个新的二进制文件 Istiod，简化了安装、运行和升级。所有 API 和运行时特性均与以前的组件一致。
 参考：官网 1.5 change note
 可扩展性的新模型 Istio 一直是最可扩展的服务网格，其 Mixer 插件允许自定义策略和遥测支持，而 Envoy 扩展则允许数据平面自定义。Istio 1.5 带来了了一个新模型，该模型使用 WebAssembly（Wasm）将 Istio 的可扩展性模型与 Envoy 的统一。Wasm 使开发人员能够安全地在 Envoy 代理中分发和执行代码，以便与遥测系统和策略系统集成，并控制路由，甚至转换消息正文。它将更加灵活和高效，从而无需单独运行 Mixer 组件（这也简化了部署）。
 更容易使用 现在，使用 istioctl 的 Istio 命令行安装已进入 beta 阶段。istioctl 也有十几项改进，包括分析新项目、更好的验证规则，以及更好的与 CI 系统集成的能力等。它已经成为了解 Istio 的系统运行状态并确保配置更改安全的必要工具。</description>
+    </item>
+    
+    <item>
+      <title>2020-04-08</title>
+      <link>https://ikingye.github.io/diary/docs/2020/04/08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/diary/docs/2020/04/08/</guid>
+      <description>2020 年 4 月 8 日 今日待办     编程 RTSP Real Time Streaming Protocol
+ 今日总结 </description>
     </item>
     
     <item>
@@ -50,12 +62,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/07/</guid>
-      <description>2020 年 4 月 7 日 今日代办     1. 编程 - 哲学 中文房间 中文房间（英语：Chinese room），是由约翰・希尔勒提出的一个思想实验，借以反驳强人工智能的观点。根据强人工智能的观点，只要计算机拥有了适当的程序，理论上就可以说计算机拥有它的认知状态并且可以像人一样地进行理解活动。
+      <description>2020 年 4 月 7 日 今日待办     编程 编程哲学 中文房间 中文房间（英语：Chinese room），是由约翰・希尔勒提出的一个思想实验，借以反驳强人工智能的观点。根据强人工智能的观点，只要计算机拥有了适当的程序，理论上就可以说计算机拥有它的认知状态并且可以像人一样地进行理解活动。
 该实验出自约翰・罗杰斯・希尔勒的论文《心灵、大脑和程序》（ Minds, Brains, and Programs）中，发表于 1980 年的《 行为与脑科学（英语：Behavioral and Brain Sciences）》。
 中文房间思想实验是什么？它是否成功地否决了图灵测试的有效性？
 中文房间是否可以否定人类会思考？
-因果论与自由意志 2. 编程 - k8s canonical/multipass  Multipass orchestrates virtual Ubuntu instances https://multipass.run
-# 创建一个 VM, 1GB 内存和 5GB 磁盘 multipass launch --name k3s --mem 1G --disk 5G # 为 VM 启动一个 shell multipass shell k3s # 在其上安装 k3s curl -sfL https://get.</description>
+因果论与自由意志 k8s 相关 canonical/multipass  Multipass orchestrates virtual Ubuntu instances https://multipass.run
+# 创建一个 VM, 1GB 内存和 5GB 磁盘 multipass launch --name k3s --mem 1G --disk 5G # 为 VM 启动一个 shell multipass shell k3s # 在其上安装 k3s curl -sfL https://get.k3s.io | sh – rancher/fleet  Rancher 开源 Fleet：业界首个海量 K8S 集群管理项目</description>
     </item>
     
     <item>
@@ -64,7 +76,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/03/</guid>
-      <description>2020 年 4 月 3 日 今日代办     编程 Bookinfo Application 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
+      <description>2020 年 4 月 3 日 今日待办     编程 Bookinfo Application 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
 运行 Bookinfo sample application alias k=&amp;#34;kubectl&amp;#34; k apply -f samples/bookinfo/platform/kube/bookinfo.yaml k get services 查看 Bookinfo 应用是否正常
 by checking for the page title in the response
 kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath=&amp;#39;{.items[0].metadata.name}&amp;#39;) -c ratings -- curl productpage:9080/productpage | grep -o &amp;#34;&amp;lt;title&amp;gt;.</description>
@@ -76,7 +88,7 @@ kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath=&amp;#39;{.items[0
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/02/</guid>
-      <description>2020 年 4 月 2 日 今日代办     试用 Istio 1.5 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
+      <description>2020 年 4 月 2 日 今日待办     编程 Istio 安装 minikube minikube start --image-mirror-country=&#39;cn&#39; --registry-mirror=https://registry.docker-cn.com
 安装 istio istioctl manifest apply --set profile=demo kubectl label namespace default istio-injection=enabled 参考：https://istio.io/docs/setup/getting-started/
 运行 Bookinfo sample application kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml kubectl get services 一切顺利，输出 service list。
 过了一会，报错，连不上 server
