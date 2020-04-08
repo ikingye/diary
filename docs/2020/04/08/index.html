@@ -12,7 +12,7 @@ public class DataProcessor { private final DbManager manager; private final Calc
 其它编程语言，例如 Swift，大量使用了带属性的 委托模式。因此，使用属性注入将使其它语言的开发人员更熟悉我们的代码。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/08/" />
-<meta property="article:modified_time" content="2020-04-09T00:28:41+08:00" />
+<meta property="article:modified_time" content="2020-04-09T00:50:23+08:00" />
 <title>2020-04-08 | 叶王日记</title>
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
@@ -20,7 +20,7 @@ public class DataProcessor { private final DbManager manager; private final Calc
 <link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/diary/en.search.min.615f401c697ee4a8075917200e4f5329ab93cf368c6d92318ad8cb74cd35dab7.js" integrity="sha256-YV9AHGl&#43;5KgHWRcgDk9TKauTzzaMbZIxitjLdM012rc="></script>
+<script defer src="/diary/en.search.min.1d880e56cfa5476ec8297bf6e56fde2b1f035509db4f7679f768194b8b43475f.js" integrity="sha256-HYgOVs&#43;lR27IKXv25W/eKx8DVQnbT3Z592gZS4tDR18="></script>
 
 <!--
 Made with Book Theme
@@ -120,6 +120,16 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/09/" >
+      2020-04-09
+  </a>
+
+</li>
+      
     
       
         <li>
@@ -537,6 +547,26 @@ A/B 测试关注的是不同版本的服务的实际效果，譬如说转化率�
 <li>这些端口都是服务器临时分配，无法用 <code>SO_REUSEADDR</code> 选项解决这个问题</li>
 </ul>
 </li>
+<li>内存
+<ul>
+<li>内核里有一个保存所有连接的 hash table</li>
+<li>不同的内核对这个 hash table 的大小设置不同，你可以通过 dmesg 命令去找到你的内核设置的大小</li>
+<li>还有一个 hash table 用来保存所有的 bound ports，主要用于可以快速的找到一个可用的端口或者随机端口</li>
+<li>不过占用内存很少很少。 一个 tcp socket 占用不到 4k。1 万条 TIME_WAIT 的连接，也就多消耗 1M 左右的内存</li>
+</ul>
+</li>
+<li>CPU
+<ul>
+<li>每次找到一个随机端口，还是需要遍历一遍 bound ports 的吧，这必然需要一些 CPU 时间。</li>
+</ul>
+</li>
+<li>源端口数量 (net.ipv4.ip_local_port_range)</li>
+<li>TIME_WAIT bucket 数量 (net.ipv4.tcp_max_tw_buckets)</li>
+<li>文件描述符数量 (max open file)
+<ul>
+<li>一个 socket 占用一个文件描述符</li>
+</ul>
+</li>
 </ul>
 <h4 id="heading-9">排查</h4>
 <h5 id="-tcp-">查看 TCP 各个状态的数量</h5>
@@ -615,8 +645,8 @@ net.ipv4.ip_local_port_range <span style="color:#f92672">=</span> <span style="c
 net.ipv4.tcp_max_syn_backlog <span style="color:#f92672">=</span> <span style="color:#ae81ff">8192</span>
 <span style="color:#75715e">#表示SYN队列的长度，默认为1024，加大队列长度为8192，可以容纳更多等待连接的网络连接数。</span>
 net.ipv4.tcp_max_tw_buckets <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>
-<span style="color:#75715e">#表示系统同时保持TIME_WAIT套接字的最大数量，如果超过这个数字，TIME_WAIT套接字将立刻被清除并打印警告信息。</span>
-默认为180000，改为5000。对于Apache、Nginx等服务器，上几行的参数可以很好地减少TIME_WAIT套接字数量，但是对于 Squid，效果却不大。此项参数可以控制TIME_WAIT套接字的最大数量，避免Squid服务器被大量的TIME_WAIT套接字拖死。
+<span style="color:#75715e">#表示系统同时保持 TIME_WAIT 套接字的最大数量，如果超过这个数字， TIME_WAIT 套接字将立刻被清除并打印警告信息。</span>
+默认为180000，改为5000。对于Apache、Nginx等服务器，上几行的参数可以很好地减少 TIME_WAIT 套接字数量，但是对于 Squid，效果却不大。此项参数可以控制 TIME_WAIT 套接字的最大数量，避免Squid服务器被大量的 TIME_WAIT 套接字拖死。
 </code></pre></div><p>参考：</p>
 <ul>
 <li><a href="https://www.cnblogs.com/dadonggg/p/8778318.html">解决 TIME_WAIT 过多造成的问题</a></li>
@@ -1165,7 +1195,7 @@ net.ipv4.tcp_max_tw_buckets <span style="color:#f92672">=</span> <span style="co
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/e334813ae0620866cf5bbaea178b7a4831ad452c" title='Last modified by yewang | 2020-04-09' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/fb52671747650a85c772444e6d125db9066906d8" title='Last modified by yewang | 2020-04-09' target="_blank" rel="noopener">
       <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-09</span>
     </a>
