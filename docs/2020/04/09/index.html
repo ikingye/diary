@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="2020-04-09"><meta property="og:title" content="2020-04-09" />
-<meta property="og:description" content="2020 年 4 月 9 日（星期四） 今日待办     生活  编程 基本算法 快速排序 排序算法时间 / 空间复杂度  插入排序类  直接插入排序 希尔排序   选择排序类  简单选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序类  归并排序    字符串倒转 大数据排序  PHP PHP 是单进程单线程的  Mysql 长连接 与 短连接 too many connections  书影音 电影  数学  语言  政史地  物化生  娱乐 游戏  其他  今日总结 " />
+<meta property="og:description" content="2020 年 4 月 9 日（星期四） 今日待办     生活  编程 基本算法 排序算法  插入排序类  直接插入排序 希尔排序 二分法插入排序   选择排序类  直接选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序 基数排序  时间 / 空间复杂度 排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。
+   排序方法 时间复杂度（平均） 时间复杂度（最坏) 时间复杂度（最好) 空间复杂度 稳定性 复杂性     希尔排序 O(nlog2n) O(n2) O(n) O(1) 不稳定 较复杂   堆排序 O(nlog2n) O(nlog2n) O(nlog2n) O(1) 不稳定 较复杂   快速排序 O(nlog2n) O(n2) O(nlog2n) O(nlog2n) 不稳定 较复杂   归并排序 O(nlog2n) O(nlog2n) O(nlog2n) O(n) 稳定 较复杂   直接插入排序 O(n2) O(n2) O(n) O(1) 稳定 简单   直接选择排序 O(n2) O(n2) O(n2) O(1) 不稳定 简单   冒泡排序 O(n2) O(n2) O(n) O(1) 稳定 简单   基数排序 O(d(n&#43;r)) O(d(n&#43;r)) O(d(n&#43;r)) O(n&#43;r) 稳定 较复杂    稳定排序与不稳定排序 稳定排序：假设在待排序的文件中，存在两个或两个以上的记录具有相同的关键字，在用某种排序法排序后，若这些相同关键字的元素的相对次序仍然不变，则这种排序方法是稳定的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/09/" />
-<meta property="article:modified_time" content="2020-04-09T00:50:49+08:00" />
+<meta property="article:modified_time" content="2020-04-09T21:33:20+08:00" />
 <title>2020-04-09 | 叶王日记</title>
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
@@ -16,7 +17,7 @@
 <link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/diary/en.search.min.fe4d21b145c65d37c0ad50a9572cb7ab99556cc6e43129197484893954e1b62c.js" integrity="sha256-/k0hsUXGXTfArVCpVyy3q5lVbMbkMSkZdISJOVThtiw="></script>
+<script defer src="/diary/en.search.min.dcf40bb734e0cd1671dd6acaff916ca276d2f6aed5f33b4d6382bea114d2d8bd.js" integrity="sha256-3PQLtzTgzRZx3WrK/5FsonbS9q7V8ztNY4K&#43;oRTS2L0="></script>
 
 <!--
 Made with Book Theme
@@ -286,10 +287,36 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#heading-3">基本算法</a>
               <ul>
-                <li><a href="#heading-4">快速排序</a></li>
-                <li><a href="#--">排序算法时间 / 空间复杂度</a></li>
-                <li><a href="#heading-5">字符串倒转</a></li>
-                <li><a href="#heading-6">大数据排序</a></li>
+                <li><a href="#heading-4">排序算法</a>
+                  <ul>
+                    <li><a href="#--">时间 / 空间复杂度</a></li>
+                    <li><a href="#heading-5">稳定排序与不稳定排序</a></li>
+                    <li><a href="#heading-6">快速排序</a></li>
+                  </ul>
+                </li>
+                <li><a href="#heading-7">字符串倒转</a></li>
+                <li><a href="#---1">大数据查找 / 排序</a>
+                  <ul>
+                    <li><a href="#-10-">多大的内存能够表示 10 亿的数</a></li>
+                    <li><a href="#bitmap">位图法（Bitmap）</a></li>
+                    <li><a href="#heading-8">分治法</a>
+                      <ul>
+                        <li><a href="#hash-buckets">哈希分桶（Hash Buckets）</a></li>
+                        <li><a href="#heading-9">归并排序</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#-1--1000-">找出 1 亿个整数中最大的 1000 个</a>
+                      <ul>
+                        <li><a href="#heading-10">最小堆</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#1tb-">1TB 的数据排序</a>
+                      <ul>
+                        <li><a href="#heading-11">外排序</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li><a href="#php">PHP</a>
@@ -299,28 +326,37 @@ https://github.com/alex-shpak/hugo-book
             </li>
             <li><a href="#mysql">Mysql</a>
               <ul>
-                <li><a href="#---1">长连接 与 短连接</a></li>
+                <li><a href="#---2">长连接 与 短连接</a></li>
                 <li><a href="#too-many-connections">too many connections</a></li>
               </ul>
             </li>
+            <li><a href="#heading-12">高并发</a></li>
+            <li><a href="#heading-13">分布式系统</a></li>
+            <li><a href="#heading-14">伸缩性</a></li>
+            <li><a href="#heading-15">扩展性</a></li>
+            <li><a href="#heading-16">火焰图</a></li>
+            <li><a href="#web">Web</a>
+              <ul>
+                <li><a href="#content-type">Content-Type</a></li>
+                <li><a href="#mime">MIME</a></li>
+                <li><a href="#cors">CORS</a>
+                  <ul>
+                    <li><a href="#heading-17">简单请求与非简单请求</a>
+                      <ul>
+                        <li><a href="#heading-18">简单请求</a></li>
+                        <li><a href="#heading-19">非简单请求</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#jsonp">JSONP</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#github-httpsshieldsio">Github 徽章</a></li>
+            <li><a href="#panjf2000gnethttpsgithubcompanjf2000gnet-github-starshttpsimgshieldsiogithubstarspanjf2000gnetsvg-go-versionhttpsimgshieldsiogithubgo-modgo-versionpanjf2000gnet">panjf2000/gnet Github stars Go version</a></li>
           </ul>
         </li>
-        <li><a href="#heading-7">书影音</a>
-          <ul>
-            <li><a href="#heading-8">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-9">数学</a></li>
-        <li><a href="#heading-10">语言</a></li>
-        <li><a href="#heading-11">政史地</a></li>
-        <li><a href="#heading-12">物化生</a></li>
-        <li><a href="#heading-13">娱乐</a>
-          <ul>
-            <li><a href="#heading-14">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-15">其他</a></li>
-        <li><a href="#heading-16">今日总结</a></li>
+        <li><a href="#heading-20">今日总结</a></li>
       </ul>
     </li>
   </ul>
@@ -344,19 +380,18 @@ https://github.com/alex-shpak/hugo-book
 <hr>
 <h2 id="heading-2">编程</h2>
 <h3 id="heading-3">基本算法</h3>
-<h4 id="heading-4">快速排序</h4>
-<h4 id="--">排序算法时间 / 空间复杂度</h4>
-<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200409004943.png" alt=""></p>
+<h4 id="heading-4">排序算法</h4>
 <ul>
 <li>插入排序类
 <ul>
 <li>直接插入排序</li>
 <li>希尔排序</li>
+<li>二分法插入排序</li>
 </ul>
 </li>
 <li>选择排序类
 <ul>
-<li>简单选择排序</li>
+<li>直接选择排序</li>
 <li>堆排序</li>
 </ul>
 </li>
@@ -366,39 +401,383 @@ https://github.com/alex-shpak/hugo-book
 <li>快速排序</li>
 </ul>
 </li>
-<li>归并排序类
-<ul>
 <li>归并排序</li>
+<li>基数排序</li>
+</ul>
+<h5 id="--">时间 / 空间复杂度</h5>
+<p>排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200409004943.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>排序方法</th>
+<th>时间复杂度（平均）</th>
+<th>时间复杂度（最坏)</th>
+<th>时间复杂度（最好)</th>
+<th>空间复杂度</th>
+<th>稳定性</th>
+<th>复杂性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>希尔排序</td>
+<td>O(nlog2n)</td>
+<td>O(n2)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(nlog2n)</td>
+<td>O(nlog2n)</td>
+<td>O(nlog2n)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>O(nlog2n)</td>
+<td>O(n2)</td>
+<td>O(nlog2n)</td>
+<td>O(nlog2n)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>O(nlog2n)</td>
+<td>O(nlog2n)</td>
+<td>O(nlog2n)</td>
+<td>O(n)</td>
+<td>稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>直接插入排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>直接选择排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td>O(n2)</td>
+<td>O(n2)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>O(d(n+r))</td>
+<td>O(d(n+r))</td>
+<td>O(d(n+r))</td>
+<td>O(n+r)</td>
+<td>稳定</td>
+<td>较复杂</td>
+</tr>
+</tbody>
+</table>
+<h5 id="heading-5">稳定排序与不稳定排序</h5>
+<p>稳定排序：假设在待排序的文件中，存在两个或两个以上的记录具有相同的关键字，在用某种排序法排序后，若这些相同关键字的元素的相对次序仍然不变，则这种排序方法是稳定的。</p>
+<p>若 a[i] = a[j], a[i] 在 a[j] 之前，经过排序后 a[i] 依然在 a[j] 之前。</p>
+<ul>
+<li>稳定排序
+<ul>
+<li>冒泡排序</li>
+<li>直接插入排序</li>
+<li>二分插入排序</li>
+<li>归并排序</li>
+<li>基数排序</li>
+</ul>
+</li>
+<li>不稳定排序
+<ul>
+<li>直接选择排序</li>
+<li>堆排序</li>
+<li>快速排序</li>
+<li>希尔排序</li>
+<li>猴子排序</li>
 </ul>
 </li>
 </ul>
-<h4 id="heading-5">字符串倒转</h4>
-<h4 id="heading-6">大数据排序</h4>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/0e06f7175b51">常见排序算法以及对应的时间复杂度和空间复杂度</a></li>
+</ul>
+<h5 id="heading-6">快速排序</h5>
+<hr>
+<h4 id="heading-7">字符串倒转</h4>
+<h4 id="---1">大数据查找 / 排序</h4>
+<h5 id="-10-">多大的内存能够表示 10 亿的数</h5>
+<p>一个 int 型占 4 字节，10 亿就是 40 亿字节，也就是 4GB</p>
+<h5 id="bitmap">位图法（Bitmap）</h5>
+<p>位图法：用一个 bit 位来标识一个 int 整数。</p>
+<p>一般来说 Bit-Map 可作为数据的查找、去重、排序等操作。</p>
+<ul>
+<li>在 3 亿个整数中找出重复的整数个数，限制内存不足以容纳 3 亿个整数</li>
+<li>对没有重复元素的整数进行排序
+<ul>
+<li>对于非重复的整数排序 BitMap 有着天然的优势，它只需要将给出的无重复整数扫描完毕，组装成为 BitMap 之后，那么直接遍历一遍 Bit 区域就可以达到排序效果了。</li>
+</ul>
+</li>
+<li>已知某个文件内包含一些电话号码，每个号码为 8 位数字，统计不同号码的个数</li>
+<li>2.5 亿个整数中找出不重复的整数的个数，内存空间不足以容纳这 2.5 亿个整数
+<ul>
+<li>将 bit-map 扩展一下，用 2bit 表示一个数即可：0 表示未出现；1 表示出现一次；2 表示出现 2 次及以上，即重复</li>
+</ul>
+</li>
+</ul>
+<h5 id="heading-8">分治法</h5>
+<p>分治法：分批处理这 10 亿的数。</p>
+<h6 id="hash-buckets">哈希分桶（Hash Buckets）</h6>
+<p>哈希分桶的思想是先遍历一遍，按照 hash 分 N 桶（比如 1000 桶），映射到不同的文件中。这样平均每个文件就 10MB，然后分别处理这 1000 个文件，找出没有重复的即可。一个相同的数字，绝对不会夸文件，有 hash 做保证。</p>
+<h6 id="heading-9">归并排序</h6>
+<h5 id="-1--1000-">找出 1 亿个整数中最大的 1000 个</h5>
+<p>有 1 亿个整数，找出最大的 1000 个，要求时间越短越好，空间占用越少越好</p>
+<p>思路：</p>
+<ol>
+<li>读入前 1000 个整数，建立最小堆。O (1)</li>
+<li>然后接着读入剩下的整数，将每个读入的整数与该最小堆中的最小值进行比较（与堆顶进行比较），如果比最小值还要小，则继续读入剩下的数据。O (N)</li>
+<li>如果读入的数据比最小值大，则删除最小值，并将该数据插入到最小堆的合适位置。O (log1000)</li>
+<li>重复步骤 2，直到将剩下的数据全部读完。</li>
+<li>按中序遍历输出该最小堆中的数据，也就是按从小到大输出最大的 1000 个数据。
+该算法的时间复杂度为 O (N)，空间复杂度为 1000，其实是常数。</li>
+</ol>
+<h6 id="heading-10">最小堆</h6>
+<hr>
+<h5 id="1tb-">1TB 的数据排序</h5>
+<p>如果有 1TB 的数据需要排序，但只有 32GB 的内存如何排序处理？</p>
+<ol>
+<li>把磁盘上的 1TB 数据分割为 40 块（chunks），每份 25GB。（注意，要留一些系统空间！）</li>
+<li>顺序将每份 25GB 数据读入内存，使用 quick sort 算法排序。</li>
+<li>把排序好的数据（也是 25GB）存放回磁盘。</li>
+<li>循环 40 次，现在，所有的 40 个块都已经各自排序了。（剩下的工作就是如何把它们合并排序！）</li>
+<li>从 40 个块中分别读取 25G/40=0.625G 入内存（40 input buffers）。</li>
+<li>执行 40 路合并，并将合并结果临时存储于 2GB 基于内存的输出缓冲区中。当缓冲区写满 2GB 时，写入硬盘上最终文件，并清空输出缓冲区；当 40 个输入缓冲区中任何一个处理完毕时，写入该缓冲区所对应的块中的下一个 0.625GB，直到全部处理完成。</li>
+</ol>
+<h6 id="heading-11">外排序</h6>
+<p>传统的排序算法一般指内排序算法，针对的是数据可以一次全部载入内存中的情况。但是面对海量数据，即数据不可能一次全部载入内存，需要用到外排序的方法。</p>
+<p>外排序采用分块的方法（分而治之），首先将数据分块，对块内数据按选择一种高效的内排序策略进行排序。然后采用归并排序的思想对于所有的块进行排序，得到所有数据的一个有序序列。</p>
+<hr>
+<p>参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u010983881/article/details/75097358">10 亿 int 型数，统计只出现一次的数</a></li>
+<li><a href="https://www.cnblogs.com/cnyao/archive/2009/11/09/interview7.html">面试题之 10 亿正整数问题续–关于多通道排序的问题</a></li>
+<li><a href="https://www.iteye.com/blog/yacare-1969931">利用位映射原理对大数据排重</a></li>
+</ul>
 <hr>
 <h3 id="php">PHP</h3>
 <h4 id="php-">PHP 是单进程单线程的</h4>
 <hr>
 <h3 id="mysql">Mysql</h3>
-<h4 id="---1">长连接 与 短连接</h4>
+<h4 id="---2">长连接 与 短连接</h4>
 <h4 id="too-many-connections">too many connections</h4>
 <hr>
-<h2 id="heading-7">书影音</h2>
-<h3 id="heading-8">电影</h3>
+<h3 id="heading-12">高并发</h3>
+<h3 id="heading-13">分布式系统</h3>
+<h3 id="heading-14">伸缩性</h3>
+<h3 id="heading-15">扩展性</h3>
+<h3 id="heading-16">火焰图</h3>
 <hr>
-<h2 id="heading-9">数学</h2>
+<h3 id="web">Web</h3>
+<h4 id="content-type">Content-Type</h4>
+<p>用于定义用户的浏览器或相关设备如何显示将要加载的数据，或者如何处理将要加载的数据</p>
+<ul>
+<li><code>application/x-www-form-urlencoded</code>
+<ul>
+<li>浏览器的原生 form 表单</li>
+<li>提交的数据按照 key1=val1&amp;key2=val2 的方式进行编码，key 和 val 都进行了 URL 转码</li>
+</ul>
+</li>
+<li><code>multipart/form-data</code>
+<ul>
+<li>常见的 POST 数据提交的方式</li>
+<li>我们使用表单<strong>上传文件</strong>时，必须让 form 的 enctype 等于这个值。</li>
+</ul>
+</li>
+<li><code>text/plain</code>
+<ul>
+<li>将文件设置为纯文本的形式，浏览器在获取到这种文件时并不会对其进行处理。</li>
+</ul>
+</li>
+<li><code>application/json</code>
+<ul>
+<li>消息主体是序列化后的 JSON 字符串</li>
+</ul>
+</li>
+<li><code>text/xml</code>
+<ul>
+<li>使用 HTTP 作为传输协议，XML 作为编码方式的远程调用规范</li>
+</ul>
+</li>
+<li><code>text/html</code>
+<ul>
+<li>意思是将文件的 content-type 设置为 text/html 的形式，</li>
+<li>浏览器在获取到这种文件时会自动调用 html 的解析器对文件进行相应的处理。</li>
+</ul>
+</li>
+</ul>
+<h4 id="mime">MIME</h4>
+<p>MIME 类型就是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。</p>
+<h4 id="cors">CORS</h4>
+<ul>
+<li>CORS 是一个 W3C 标准，全称是 &ldquo;跨域资源共享&rdquo;（Cross-origin resource sharing）。
+<ul>
+<li>它允许浏览器向跨源服务器，发出 XMLHttpRequest 请求，从而克服了 AJAX 只能同源使用的限制。</li>
+<li>整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。</li>
+</ul>
+</li>
+<li>CORS 需要<strong>浏览器和服务器</strong>同时支持。
+<ul>
+<li>目前，所有浏览器都支持该功能，IE 浏览器不能低于 IE10。</li>
+<li>对于前端开发者来说，CORS 通信与同源的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</li>
+<li>实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨源通信。</li>
+</ul>
+</li>
+</ul>
+<h5 id="heading-17">简单请求与非简单请求</h5>
+<p>简单请求（simple request）
+非简单请求（not-so-simple request）</p>
+<p>只要同时满足以下两大条件，就属于<strong>简单请求</strong>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. 请求方法是以下三种方法之一：
+HEAD
+GET
+POST
+
+2. HTTP 的头信息不超出以下几种字段：
+Accept
+Accept-Language
+Content-Language
+Last-Event-ID
+Content-Type：只限于三个值 application/x-www-form-urlencoded、multipart/form-data、text/plain
+</code></pre></div><p>凡是不同时满足上面两个条件，就属于<strong>非简单请求</strong>。</p>
+<h6 id="heading-18">简单请求</h6>
+<ul>
+<li>
+<p>对于简单请求，浏览器直接发出 CORS 请求。具体来说，就是在头信息之中，增加一个 <strong>Origin</strong> 字段。</p>
+<ul>
+<li>Origin 字段用来说明，本次请求来自哪个源（协议 + 域名 + 端口）。服务器根据这个值，决定是否同意这次请求。</li>
+</ul>
+</li>
+<li>
+<p>如果 Origin 指定的源，不在许可范围内，服务器会返回一个正常的 HTTP 回应。</p>
+<ul>
+<li>浏览器发现，这个回应的头信息没有包含 <strong>Access-Control-Allow-Origin</strong> 字段，就知道出错了，从而抛出一个错误，被 XMLHttpRequest 的 onerror 回调函数捕获。</li>
+<li>注意，这种错误无法通过状态码识别，因为 HTTP 回应的状态码有可能是 200。</li>
+</ul>
+</li>
+<li>
+<p>如果 Origin 指定的域名在许可范围内，服务器返回的响应，会多出几个头信息字段。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 有三个与 CORS 请求相关的字段，都以 Access-Control- 开头</span>
+
+<span style="color:#75715e"># 该字段是必须的。它的值要么是请求时 Origin 字段的值，要么是一个 *，表示接受任意域名的请求。</span>
+Access-Control-Allow-Origin: http://api.bob.com
+
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: FooBar
+Content-Type: text/html; charset<span style="color:#f92672">=</span>utf-8
+</code></pre></div></li>
+</ul>
+<ul>
+<li>CORS 请求默认<strong>不发送</strong> Cookie 和 HTTP 认证信息。</li>
+<li>如果要把 Cookie 发到服务器：
+<ul>
+<li>服务器同意，指定 Access-Control-Allow-Credentials 字段
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Access-Control-Allow-Credentials 只能是 true，或者不存在</span>
+Access-Control-Allow-Credentials: true
+</code></pre></div></li>
+<li>在 AJAX 请求中打开 withCredentials 属性
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">var xhr <span style="color:#f92672">=</span> new XMLHttpRequest<span style="color:#f92672">(</span><span style="color:#f92672">)</span>;
+xhr.withCredentials <span style="color:#f92672">=</span> true;
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h6 id="heading-19">非简单请求</h6>
+<ul>
+<li>
+<p>非简单请求是那种对服务器有特殊要求的请求，</p>
+<ul>
+<li>比如请求方法是 <code>PUT</code> 或 <code>DELETE，</code></li>
+<li>或者 <code>Content-Type</code> 字段的类型是 <code>application/json</code></li>
+</ul>
+</li>
+<li>
+<p>非简单请求的 CORS 请求，会在正式通信之前，增加一次 HTTP 查询请求，称为 &ldquo;预检&rdquo; 请求（preflight）。</p>
+<ul>
+<li>
+<p>&ldquo;预检&rdquo; 请求用的请求方法是 OPTIONS，表示这个请求是用来询问的。</p>
+</li>
+<li>
+<p>头信息里面，关键字段是 Origin，表示请求来自哪个源。</p>
+</li>
+<li>
+<p>&ldquo;预检&rdquo; 请求的头信息包括两个特殊字段：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. Access-Control-Request-Method
+该字段是必须的，用来列出浏览器的 CORS 请求会用到哪些 HTTP 方法，比如 PUT。
+
+2. Access-Control-Request-Headers
+该字段是一个逗号分隔的字符串，指定浏览器 CORS 请求会额外发送的头信息字段，比如 X-Custom-Header。
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>服务器收到 &ldquo;预检&rdquo; 请求以后，检查了 Origin、Access-Control-Request-Method 和 Access-Control-Request-Headers 字段以后</p>
+<ul>
+<li>允许跨源请求，就可以做出回应：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Access-Control-Allow-Origin: http://api.example.com
+<span style="color:#75715e"># 星号 表示同意任意跨源请求</span>
+<span style="color:#75715e"># Access-Control-Allow-Origin: *</span>
+</code></pre></div></li>
+<li>如果浏览器否定了 &ldquo;预检&rdquo; 请求，会返回一个正常的 HTTP 回应，但是没有任何 CORS 相关的头信息字段。
+<ul>
+<li>浏览器就会认定，服务器不同意预检请求，因此触发一个错误，被 XMLHttpRequest 对象的 onerror 回调函数捕获。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="jsonp">JSONP</h5>
+<p>CORS 与 JSONP 的使用目的相同，但是比 JSONP 更强大。</p>
+<p>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求。JSONP 的优势在于支持老式浏览器，以及可以向不支持 CORS 的网站请求数据。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.ruanyifeng.com/blog/2016/04/cors.html">跨域资源共享 CORS 详解</a></li>
+</ul>
 <hr>
-<h2 id="heading-10">语言</h2>
+<h3 id="github-httpsshieldsio"><a href="https://shields.io/">Github 徽章</a></h3>
+<p>比如 <a href="https://github.com/ikingye/ote-stack">https://github.com/ikingye/ote-stack</a></p>
+<p><a href="https://shields.io/category/version">版本</a>：
+<img src="https://img.shields.io/github/go-mod/go-version/ikingye/ote-stack" alt="Go version"></p>
 <hr>
-<h2 id="heading-11">政史地</h2>
+<h3 id="panjf2000gnethttpsgithubcompanjf2000gnet-github-starshttpsimgshieldsiogithubstarspanjf2000gnetsvg-go-versionhttpsimgshieldsiogithubgo-modgo-versionpanjf2000gnet"><a href="https://github.com/panjf2000/gnet">panjf2000/gnet</a> <img src="https://img.shields.io/github/stars/panjf2000/gnet.svg" alt="Github stars"> <img src="https://img.shields.io/github/go-mod/go-version/panjf2000/gnet" alt="Go version"></h3>
+<p>gnet 是一个基于事件驱动的高性能和轻量级网络框架。它直接使用 epoll 和 kqueue 系统调用而非标准 Go 网络包：net 来构建网络应用，它的工作原理类似两个开源的网络库：<a href="https://github.com/netty/netty">netty/netty</a> <img src="https://img.shields.io/github/stars/netty/netty.svg" alt="Github stars"> 和 <a href="https://github.com/libuv/libuv">libuv/libuv</a> <img src="https://img.shields.io/github/stars/libuv/libuv.svg" alt="Github stars">。</p>
+<p>gnet 设计开发的初衷不是为了取代 Go 的标准网络库：net，而是为了创造出一个类似于 <a href="https://github.com/antirez/redis">antirez/redis</a> <img src="https://img.shields.io/github/stars/antirez/redis.svg" alt="Github stars">、<a href="https://github.com/haproxy/haproxy">haproxy/haproxy</a> <img src="https://img.shields.io/github/stars/haproxy/haproxy.svg" alt="Github stars"> 能高效处理网络包的 Go 语言网络服务器框架。</p>
+<p>gnet 的卖点在于它是一个高性能、轻量级、非阻塞的纯 Go 实现的传输层（TCP/UDP/Unix Domain Socket）网络框架，开发者可以使用 gnet 来实现自己的应用层网络协议 (HTTP、RPC、Redis、WebSocket 等等)，从而构建出自己的应用层网络应用：比如在 gnet 上实现 HTTP 协议就可以创建出一个 HTTP 服务器 或者 Web 开发框架，实现 Redis 协议就可以创建出自己的 Redis 服务器等等。</p>
+<p>gnet 衍生自另一个项目：<a href="https://github.com/tidwall/evio">tidwall/evio</a> <img src="https://img.shields.io/github/stars/tidwall/evio.svg" alt="Github stars">，但拥有更丰富的功能特性，且性能远胜之。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000022283944">最快的 Go 网络框架 gnet 来啦！</a></li>
+</ul>
 <hr>
-<h2 id="heading-12">物化生</h2>
-<hr>
-<h2 id="heading-13">娱乐</h2>
-<h3 id="heading-14">游戏</h3>
-<hr>
-<h2 id="heading-15">其他</h2>
-<hr>
-<h2 id="heading-16">今日总结</h2>
+<h2 id="heading-20">今日总结</h2>
 </article>
  
       
@@ -411,7 +790,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/b4bc8e0e6a71ccdbb1013c99955091e23bbf2773" title='Last modified by yewang | 2020-04-09' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/422d2a7e5e34b23fea62082c5b80aa443e8f1105" title='Last modified by yewang | 2020-04-09' target="_blank" rel="noopener">
       <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-09</span>
     </a>
@@ -455,10 +834,36 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#heading-3">基本算法</a>
               <ul>
-                <li><a href="#heading-4">快速排序</a></li>
-                <li><a href="#--">排序算法时间 / 空间复杂度</a></li>
-                <li><a href="#heading-5">字符串倒转</a></li>
-                <li><a href="#heading-6">大数据排序</a></li>
+                <li><a href="#heading-4">排序算法</a>
+                  <ul>
+                    <li><a href="#--">时间 / 空间复杂度</a></li>
+                    <li><a href="#heading-5">稳定排序与不稳定排序</a></li>
+                    <li><a href="#heading-6">快速排序</a></li>
+                  </ul>
+                </li>
+                <li><a href="#heading-7">字符串倒转</a></li>
+                <li><a href="#---1">大数据查找 / 排序</a>
+                  <ul>
+                    <li><a href="#-10-">多大的内存能够表示 10 亿的数</a></li>
+                    <li><a href="#bitmap">位图法（Bitmap）</a></li>
+                    <li><a href="#heading-8">分治法</a>
+                      <ul>
+                        <li><a href="#hash-buckets">哈希分桶（Hash Buckets）</a></li>
+                        <li><a href="#heading-9">归并排序</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#-1--1000-">找出 1 亿个整数中最大的 1000 个</a>
+                      <ul>
+                        <li><a href="#heading-10">最小堆</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#1tb-">1TB 的数据排序</a>
+                      <ul>
+                        <li><a href="#heading-11">外排序</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li><a href="#php">PHP</a>
@@ -468,28 +873,37 @@ https://github.com/alex-shpak/hugo-book
             </li>
             <li><a href="#mysql">Mysql</a>
               <ul>
-                <li><a href="#---1">长连接 与 短连接</a></li>
+                <li><a href="#---2">长连接 与 短连接</a></li>
                 <li><a href="#too-many-connections">too many connections</a></li>
               </ul>
             </li>
+            <li><a href="#heading-12">高并发</a></li>
+            <li><a href="#heading-13">分布式系统</a></li>
+            <li><a href="#heading-14">伸缩性</a></li>
+            <li><a href="#heading-15">扩展性</a></li>
+            <li><a href="#heading-16">火焰图</a></li>
+            <li><a href="#web">Web</a>
+              <ul>
+                <li><a href="#content-type">Content-Type</a></li>
+                <li><a href="#mime">MIME</a></li>
+                <li><a href="#cors">CORS</a>
+                  <ul>
+                    <li><a href="#heading-17">简单请求与非简单请求</a>
+                      <ul>
+                        <li><a href="#heading-18">简单请求</a></li>
+                        <li><a href="#heading-19">非简单请求</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#jsonp">JSONP</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#github-httpsshieldsio">Github 徽章</a></li>
+            <li><a href="#panjf2000gnethttpsgithubcompanjf2000gnet-github-starshttpsimgshieldsiogithubstarspanjf2000gnetsvg-go-versionhttpsimgshieldsiogithubgo-modgo-versionpanjf2000gnet">panjf2000/gnet Github stars Go version</a></li>
           </ul>
         </li>
-        <li><a href="#heading-7">书影音</a>
-          <ul>
-            <li><a href="#heading-8">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-9">数学</a></li>
-        <li><a href="#heading-10">语言</a></li>
-        <li><a href="#heading-11">政史地</a></li>
-        <li><a href="#heading-12">物化生</a></li>
-        <li><a href="#heading-13">娱乐</a>
-          <ul>
-            <li><a href="#heading-14">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-15">其他</a></li>
-        <li><a href="#heading-16">今日总结</a></li>
+        <li><a href="#heading-20">今日总结</a></li>
       </ul>
     </li>
   </ul>
