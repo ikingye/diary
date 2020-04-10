@@ -33,6 +33,32 @@
     </item>
     
     <item>
+      <title>2020-04-11</title>
+      <link>https://ikingye.github.io/diary/docs/2020/04/11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/diary/docs/2020/04/11/</guid>
+      <description>2020 年 4 月 11 日（星期六） 今日待办  Istio Handbook 周报  周一发布到钉钉群     生活  编程 Github Github star 历史 timqian/star-history https://star-history.t9t.io/
+vesoft-inc/github-statistics A react static app for displaying github repo statistiscs like Star History, Fork History and more.
+https://vesoft-inc.github.io/github-statistics/
+antonmedv/spark 
+seladb/startrack-js GitHub star history and stats - based on JavaScript only!
+https://seladb.github.io/StarTrack-js/
+elliotreborn/github-stars 技术栈的 star 趋势数据
+ Github PR 统计 开源相关工作岗位 t9tio/open-source-jobs
+A list of Open Source projects offering jobs.</description>
+    </item>
+    
+    <item>
+      <title>2020-04-10</title>
+      <link>https://ikingye.github.io/diary/docs/2020/04/10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/diary/docs/2020/04/10/</guid>
+      <description>2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   生活  编程 mosquitto (mqtt) 收到数据： &#39;{&amp;quot;applicationID&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;applicationName&amp;quot;:&amp;quot;0000000000000001&amp;quot;,&amp;quot;deviceName&amp;quot;:&amp;quot;d143-K5-out&amp;quot;,&amp;quot;devEUI&amp;quot;:&amp;quot;ffffff100000d143&amp;quot;,&amp;quot;txInfo&amp;quot;:{&amp;quot;frequency&amp;quot;:481700000,&amp;quot;dr&amp;quot;:2},&amp;quot;adr&amp;quot;:false,&amp;quot;fCnt&amp;quot;:68570,&amp;quot;fPort&amp;quot;:44,&amp;quot;data&amp;quot;:&amp;quot;BQEA&amp;quot;}&#39; topic: &#39;application/1/device/ffffff100000d143/rx&#39; 解析后发布到 IoT-Hub： {&amp;quot;reported&amp;quot;:{&amp;quot;alarmStatus&amp;quot;:&amp;quot;warning&amp;quot;,&amp;quot;frameType&amp;quot;:1,&amp;quot;sensorType&amp;quot;:5}} mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic shirpOpts.</description>
+    </item>
+    
+    <item>
       <title>2020-04-09</title>
       <link>https://ikingye.github.io/diary/docs/2020/04/09/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

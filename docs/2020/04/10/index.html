@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2020-04-10"><meta property="og:title" content="2020-04-10" />
+<meta property="og:description" content="2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   生活  编程 mosquitto (mqtt) 收到数据： &#39;{&quot;applicationID&quot;:&quot;1&quot;,&quot;applicationName&quot;:&quot;0000000000000001&quot;,&quot;deviceName&quot;:&quot;d143-K5-out&quot;,&quot;devEUI&quot;:&quot;ffffff100000d143&quot;,&quot;txInfo&quot;:{&quot;frequency&quot;:481700000,&quot;dr&quot;:2},&quot;adr&quot;:false,&quot;fCnt&quot;:68570,&quot;fPort&quot;:44,&quot;data&quot;:&quot;BQEA&quot;}&#39; topic: &#39;application/1/device/ffffff100000d143/rx&#39; 解析后发布到 IoT-Hub： {&quot;reported&quot;:{&quot;alarmStatus&quot;:&quot;warning&quot;,&quot;frameType&quot;:1,&quot;sensorType&quot;:5}} mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic shirpOpts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/10/" />
+<meta property="article:modified_time" content="2020-04-11T00:04:51+08:00" />
+<title>2020-04-10 | 叶王日记</title>
+<link rel="icon" href="/diary/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
+
+
+<script defer src="/diary/en.search.min.6b991ab7ad21d5574f00499e3533c4dfaeba6c9dbefdcc2526919ea159c697aa.js" integrity="sha256-a5kat60h1VdPAEmeNTPE3666bJ2&#43;/cwlJpGeoVnGl6o="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/diary"><span>叶王日记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/diary/docs/2020/" >
+      2020 年
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/diary/docs/2020/04/" >
+      4 月
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/11/" >
+      2020-04-11
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/10/"  class="active">
+      2020-04-10
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/09/" >
+      2020-04-09
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/08/" >
+      2020-04-08
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/07/" >
+      2020-04-07
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/06/" >
+      2020-04-06
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/03/" >
+      2020-04-03
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/diary/docs/2020/04/02/" >
+      2020-04-02
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/diary/docs/2020/03/" >
+      3 月
+  </a>
+
+
+    
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/diary/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>2020-04-10</strong>
+
+  <label for="toc-control">
+    <img src="/diary/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
+      <ul>
+        <li><a href="#heading">今日待办</a></li>
+        <li><a href="#heading-1">生活</a></li>
+        <li><a href="#heading-2">编程</a>
+          <ul>
+            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a></li>
+            <li><a href="#alarmstatus">alarmStatus</a></li>
+            <li><a href="#frametype">frametype</a></li>
+            <li><a href="#sensortype">sensorType</a></li>
+            <li><a href="#heading-3">星物</a></li>
+            <li><a href="#heading-4">排期</a>
+              <ul>
+                <li><a href="#ote-30">OTE 3.0</a></li>
+                <li><a href="#heading-5">星物</a></li>
+                <li><a href="#heading-6">星视</a></li>
+                <li><a href="#heading-7">星智</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#heading-8">书影音</a>
+          <ul>
+            <li><a href="#heading-9">电影</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading-10">数学</a></li>
+        <li><a href="#heading-11">语言</a></li>
+        <li><a href="#heading-12">政史地</a></li>
+        <li><a href="#heading-13">物化生</a></li>
+        <li><a href="#heading-14">娱乐</a>
+          <ul>
+            <li><a href="#heading-15">游戏</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading-16">其他</a></li>
+        <li><a href="#heading-17">今日总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown"><h1 id="2020--4--10-">2020 年 4 月 10 日（星期五）</h1>
+<h2 id="heading">今日待办</h2>
+<ul>
+<li><input disabled="" type="checkbox"><a href="https://github.com/servicemesher/istio-handbook">Istio Handbook</a> 编委会双周会 21:00-22:00</li>
+</ul>
+<hr>
+<h2 id="heading-1">生活</h2>
+<hr>
+<h2 id="heading-2">编程</h2>
+<h3 id="mosquitto-mqtt">mosquitto (mqtt)</h3>
+<pre><code>收到数据： '{&quot;applicationID&quot;:&quot;1&quot;,&quot;applicationName&quot;:&quot;0000000000000001&quot;,&quot;deviceName&quot;:&quot;d143-K5-out&quot;,&quot;devEUI&quot;:&quot;ffffff100000d143&quot;,&quot;txInfo&quot;:{&quot;frequency&quot;:481700000,&quot;dr&quot;:2},&quot;adr&quot;:false,&quot;fCnt&quot;:68570,&quot;fPort&quot;:44,&quot;data&quot;:&quot;BQEA&quot;}' topic: 'application/1/device/ffffff100000d143/rx'
+解析后发布到 IoT-Hub： {&quot;reported&quot;:{&quot;alarmStatus&quot;:&quot;warning&quot;,&quot;frameType&quot;:1,&quot;sensorType&quot;:5}}
+</code></pre><pre><code>mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic
+</code></pre><p>shirpOpts.AddBroker(&ldquo;tcp://localhost:1883&rdquo;)
+st := shirpStackClient.Subscribe(&ldquo;application/#&quot;, 0, msgHandle)</p>
+<p>payload := msg.Payload()
+topic := msg.Topic()
+fmt.Printf(&ldquo;收到数据： &lsquo;%s&rsquo; topic: &lsquo;%s&rsquo;\n&rdquo;, payload, topic)</p>
+<p>mosquitto_pub -t topic01 -m &ldquo;test msg&rdquo;
+mosquitto_sub -t topic01</p>
+<h3 id="alarmstatus">alarmStatus</h3>
+<p>warning</p>
+<h3 id="frametype">frametype</h3>
+<p>只有两种，1 和 0</p>
+<p>frameType=0 表示是心跳帧
+frameType=1 表示是传感器数据</p>
+<h3 id="sensortype">sensorType</h3>
+<p>sensorType=5 这个应该是对应光栅这种传感器</p>
+<p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
+<p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
+<p>mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;</p>
+<h3 id="heading-3">星物</h3>
+<p>这周会完成红外光栅应用统计的开发（订阅，解码，统计）。
+还剩下</p>
+<ol>
+<li>LoRa 后台权限改造</li>
+<li>应用统计数据接入到 LoRa 后台（统计数据存储到 LoRa 后台，并增加相应 web api）</li>
+<li>产品前后端开发</li>
+<li>前后端联调</li>
+</ol>
+<h3 id="heading-4">排期</h3>
+<h4 id="ote-30">OTE 3.0</h4>
+<p>kubeovn 调研</p>
+<h4 id="heading-5">星物</h4>
+<ol>
+<li>LoRa 后台权限改造</li>
+<li>应用统计 api</li>
+<li>前后端联调</li>
+</ol>
+<h4 id="heading-6">星视</h4>
+<ol>
+<li>onvif 联调</li>
+<li>gb28181 标准调研 1 周</li>
+<li>方案选型 exosip, pjsip 验证 1 周</li>
+<li>gb28181 开发 1 周</li>
+<li>gb28181 优化 1 周</li>
+<li>webrtc 调研</li>
+<li>H264, H265</li>
+<li>【低】模拟 / 数字摄像头的视频流获取方案</li>
+<li>【星视 算子对接讨论】</li>
+</ol>
+<h4 id="heading-7">星智</h4>
+<ol>
+<li>算子接入</li>
+<li>限流，熔断开发 1.5 周</li>
+<li>网关统计指标只统计算子 3 天</li>
+</ol>
+<p>4.17 onvif 联调，算子接入（人体检测与属性识别），LoRa 后台权限，LoRa 应用统计 api
+4.24 LoRa 前后端联调，gb28181 标准调研，【星视 算子对接讨论】
+5.1 方案选型 exosip, pjsip 验证
+5.8 gb28181 开发
+5.15 webrtc 调研
+5.22 网关统计指标只统计算子，【kubeovn 调研】
+5.29 限流熔断开发，gb28181 优化
+6.5 限流熔断开发
+6.12 算子接入，H264, H265 。。。</p>
+<p>9 周</p>
+<hr>
+<p>6.26
+7.3</p>
+<hr>
+<h2 id="heading-8">书影音</h2>
+<h3 id="heading-9">电影</h3>
+<hr>
+<h2 id="heading-10">数学</h2>
+<hr>
+<h2 id="heading-11">语言</h2>
+<hr>
+<h2 id="heading-12">政史地</h2>
+<hr>
+<h2 id="heading-13">物化生</h2>
+<hr>
+<h2 id="heading-14">娱乐</h2>
+<h3 id="heading-15">游戏</h3>
+<hr>
+<h2 id="heading-16">其他</h2>
+<hr>
+<h2 id="heading-17">今日总结</h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/ae07fa69c19646202657f20496539889d668c7d6" title='Last modified by yewang | 2020-04-11' target="_blank" rel="noopener">
+      <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-04-11</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/diary"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+  
+ 
+      </footer>
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
+      <ul>
+        <li><a href="#heading">今日待办</a></li>
+        <li><a href="#heading-1">生活</a></li>
+        <li><a href="#heading-2">编程</a>
+          <ul>
+            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a></li>
+            <li><a href="#alarmstatus">alarmStatus</a></li>
+            <li><a href="#frametype">frametype</a></li>
+            <li><a href="#sensortype">sensorType</a></li>
+            <li><a href="#heading-3">星物</a></li>
+            <li><a href="#heading-4">排期</a>
+              <ul>
+                <li><a href="#ote-30">OTE 3.0</a></li>
+                <li><a href="#heading-5">星物</a></li>
+                <li><a href="#heading-6">星视</a></li>
+                <li><a href="#heading-7">星智</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#heading-8">书影音</a>
+          <ul>
+            <li><a href="#heading-9">电影</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading-10">数学</a></li>
+        <li><a href="#heading-11">语言</a></li>
+        <li><a href="#heading-12">政史地</a></li>
+        <li><a href="#heading-13">物化生</a></li>
+        <li><a href="#heading-14">娱乐</a>
+          <ul>
+            <li><a href="#heading-15">游戏</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading-16">其他</a></li>
+        <li><a href="#heading-17">今日总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<a href="https://github.com/ikingye/diary" 
+class="github-corner" aria-label="View source on GitHub">
+<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+  <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+  <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+  <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg></a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
