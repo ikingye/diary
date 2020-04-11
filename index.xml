@@ -15,9 +15,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/03/31/</guid>
-      <description>2020 年 3 月 31 日（星期二） 今日待办  xxx   语言 滥觞 lànshāng 浮起酒杯。喻事情的开始
+      <description>2020 年 3 月 31 日（星期二） 今日待办  xxx   语言文化 滥觞 lànshāng 浮起酒杯。喻事情的开始
 夫江始出于岷山,其源可以滥觞。——《孔子家语·三恕》
-政史地 内卷化（网络）  靠极端剥削、压榨自己，从而在社会获得少量的竞争优势 明明可以有更加轻松，效果还更好的选择，却仍旧在旧有的选择中不断投入各类资源，以及由此产生的各种现象 不改变生产方式，不提高技术水平，而是靠极端剥削、压榨本国的劳动力在国际市场获得竞争优势  举一个很简单的例子：
+政经法史地 内卷化（网络）  靠极端剥削、压榨自己，从而在社会获得少量的竞争优势 明明可以有更加轻松，效果还更好的选择，却仍旧在旧有的选择中不断投入各类资源，以及由此产生的各种现象 不改变生产方式，不提高技术水平，而是靠极端剥削、压榨本国的劳动力在国际市场获得竞争优势  举一个很简单的例子：
 假定某省考生数量，录取名额不变，即录取率不变。
 现在有一所学校，甲校要求高中生每天学习 14 个小时，寒暑假和双休日补课。这一操作的效果是在短期内提高了甲校的录取率。
 这种录取率提升的甜头让乙、丙、丁校羡慕，于是均决定向甲校学习，推行甲校的教学管理模式。
@@ -38,15 +38,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/11/</guid>
-      <description>2020 年 4 月 11 日（星期六） 今日待办  Istio Handbook 周报  周一发布到钉钉群     生活  编程 Github Github star 历史 timqian/star-history https://star-history.t9t.io/
-vesoft-inc/github-statistics A react static app for displaying github repo statistiscs like Star History, Fork History and more.
-https://vesoft-inc.github.io/github-statistics/
-antonmedv/spark 
-seladb/startrack-js GitHub star history and stats - based on JavaScript only!
-https://seladb.github.io/StarTrack-js/
-elliotreborn/github-stars 技术栈的 star 趋势数据
- Github PR 统计 开源相关工作岗位 t9tio/open-source-jobs
-A list of Open Source projects offering jobs.</description>
+      <description>2020 年 4 月 11 日（星期六） 今日待办  Istio Handbook 周报  周一发布到钉钉群     编程 架构设计 HA 高可用 High Availability
+LB 负载均衡 Load Balance
+产品设计 POC 概念验证 Proof Of Concept
+MVP 最小化可行产品 Minimum Viable Product
+需求管理 KANO 模型 价值 vs 复杂度矩阵 分布式一致性 Paxos Paxos https://raft.github.io
+由于 Paxos 难以理解，所以才有了 Raft
+Raft 以可理解性和易于实现为目标：
+ Leader 选举（Leader election） 日志同步（Log replication） 安全性（Safety） 日志压缩（Log compaction） 成员变更（Membership change）  shell top htop
+brew install htop</description>
     </item>
     
     <item>
@@ -55,7 +55,8 @@ A list of Open Source projects offering jobs.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/10/</guid>
-      <description>2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   生活  编程 mosquitto (mqtt) 收到数据： &#39;{&amp;quot;applicationID&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;applicationName&amp;quot;:&amp;quot;0000000000000001&amp;quot;,&amp;quot;deviceName&amp;quot;:&amp;quot;d143-K5-out&amp;quot;,&amp;quot;devEUI&amp;quot;:&amp;quot;ffffff100000d143&amp;quot;,&amp;quot;txInfo&amp;quot;:{&amp;quot;frequency&amp;quot;:481700000,&amp;quot;dr&amp;quot;:2},&amp;quot;adr&amp;quot;:false,&amp;quot;fCnt&amp;quot;:68570,&amp;quot;fPort&amp;quot;:44,&amp;quot;data&amp;quot;:&amp;quot;BQEA&amp;quot;}&#39; topic: &#39;application/1/device/ffffff100000d143/rx&#39; 解析后发布到 IoT-Hub： {&amp;quot;reported&amp;quot;:{&amp;quot;alarmStatus&amp;quot;:&amp;quot;warning&amp;quot;,&amp;quot;frameType&amp;quot;:1,&amp;quot;sensorType&amp;quot;:5}} mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic shirpOpts.</description>
+      <description>2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   编程 mosquitto (mqtt) mosquitto_pub mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic mosquitto_pub -t &amp;lsquo;application/1/device/ffffff100000d143/rx&amp;rsquo; -m &amp;lsquo;{&amp;ldquo;applicationID&amp;rdquo;:&amp;ldquo;1&amp;rdquo;,&amp;ldquo;applicationName&amp;rdquo;:&amp;ldquo;0000000000000001&amp;rdquo;,&amp;ldquo;deviceName&amp;rdquo;:&amp;ldquo;d143-K5-out&amp;rdquo;,&amp;ldquo;devEUI&amp;rdquo;:&amp;ldquo;ffffff100000d143&amp;rdquo;,&amp;ldquo;txInfo&amp;rdquo;:{&amp;ldquo;frequency&amp;rdquo;:481700000,&amp;ldquo;dr&amp;rdquo;:2},&amp;ldquo;adr&amp;rdquo;:false,&amp;ldquo;fCnt&amp;rdquo;:68570,&amp;ldquo;fPort&amp;rdquo;:44,&amp;ldquo;data&amp;rdquo;:&amp;ldquo;BQEA&amp;rdquo;}&amp;rsquo;
+mosquitto_sub mosquitto_sub -t &amp;lsquo;application/1/device/ffffff100000d143/rx&amp;rsquo;</description>
     </item>
     
     <item>
@@ -64,7 +65,7 @@ A list of Open Source projects offering jobs.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/09/</guid>
-      <description>2020 年 4 月 9 日（星期四） 今日待办     生活  编程 基本算法 排序算法  插入排序类  直接插入排序 希尔排序 二分法插入排序   选择排序类  直接选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序 基数排序  时间 / 空间复杂度 排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。
+      <description>2020 年 4 月 9 日（星期四） 今日待办  编程  熟悉基本算法  排序算法（时间 / 空间复杂度） 大数据查找 / 排序   CORS     编程 基本算法 排序算法  插入排序类  直接插入排序 希尔排序 二分法插入排序   选择排序类  直接选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序 基数排序  时间 / 空间复杂度 排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。
    排序方法 时间复杂度（平均） 时间复杂度（最坏) 时间复杂度（最好) 空间复杂度 稳定性 复杂性     希尔排序 O(nlog2n) O(n2) O(n) O(1) 不稳定 较复杂   堆排序 O(nlog2n) O(nlog2n) O(nlog2n) O(1) 不稳定 较复杂   快速排序 O(nlog2n) O(n2) O(nlog2n) O(nlog2n) 不稳定 较复杂   归并排序 O(nlog2n) O(nlog2n) O(nlog2n) O(n) 稳定 较复杂   直接插入排序 O(n2) O(n2) O(n) O(1) 稳定 简单   直接选择排序 O(n2) O(n2) O(n2) O(1) 不稳定 简单   冒泡排序 O(n2) O(n2) O(n) O(1) 稳定 简单   基数排序 O(d(n+r)) O(d(n+r)) O(d(n+r)) O(n+r) 稳定 较复杂    稳定排序与不稳定排序 稳定排序：假设在待排序的文件中，存在两个或两个以上的记录具有相同的关键字，在用某种排序法排序后，若这些相同关键字的元素的相对次序仍然不变，则这种排序方法是稳定的。</description>
     </item>
     
@@ -74,12 +75,13 @@ A list of Open Source projects offering jobs.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/03/08/</guid>
-      <description>2020 年 3 月 8 日（星期日） 今日待办  陪闵子玩 Istio 1.5 发布了，学习一个   生活 陪闵子玩  大部分时间，她还是像以往一样，对着小度播的儿歌，左右摇摆  闵子现在挺会跳了 下午陪闵子画画（乱画）  闵子很喜欢笑，笑起来很可爱，像她妈妈    编程 算法教程 今天看到一个算法教程还不错，推荐一下，labuladong 的算法小抄。
+      <description>2020 年 3 月 8 日（星期日） 今日待办  陪闵子玩 Istio 1.5 发布了，学习一个   编程 算法教程 今天看到一个算法教程还不错，推荐一下，labuladong 的算法小抄。
  Istio 1.5 Istio 1.5 于 2020-03-05 发布了。
 引入 Istiod 将控制平面整合为一个新的二进制文件 Istiod，简化了安装、运行和升级。所有 API 和运行时特性均与以前的组件一致。
 参考：官网 1.5 change note
 可扩展性的新模型 Istio 一直是最可扩展的服务网格，其 Mixer 插件允许自定义策略和遥测支持，而 Envoy 扩展则允许数据平面自定义。Istio 1.5 带来了了一个新模型，该模型使用 WebAssembly（Wasm）将 Istio 的可扩展性模型与 Envoy 的统一。Wasm 使开发人员能够安全地在 Envoy 代理中分发和执行代码，以便与遥测系统和策略系统集成，并控制路由，甚至转换消息正文。它将更加灵活和高效，从而无需单独运行 Mixer 组件（这也简化了部署）。
-更容易使用 现在，使用 istioctl 的 Istio 命令行安装已进入 beta 阶段。istioctl 也有十几项改进，包括分析新项目、更好的验证规则，以及更好的与 CI 系统集成的能力等。它已经成为了解 Istio 的系统运行状态并确保配置更改安全的必要工具。</description>
+更容易使用 现在，使用 istioctl 的 Istio 命令行安装已进入 beta 阶段。istioctl 也有十几项改进，包括分析新项目、更好的验证规则，以及更好的与 CI 系统集成的能力等。它已经成为了解 Istio 的系统运行状态并确保配置更改安全的必要工具。
+Istio 的安全性也得到了许多增强，更易于使用。Beta 版自动 mTLS 的启动，简化了 mTLS 的配置并使其自动化。</description>
     </item>
     
     <item>

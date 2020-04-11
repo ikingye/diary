@@ -15,15 +15,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/11/</guid>
-      <description>2020 年 4 月 11 日（星期六） 今日待办  Istio Handbook 周报  周一发布到钉钉群     生活  编程 Github Github star 历史 timqian/star-history https://star-history.t9t.io/
-vesoft-inc/github-statistics A react static app for displaying github repo statistiscs like Star History, Fork History and more.
-https://vesoft-inc.github.io/github-statistics/
-antonmedv/spark 
-seladb/startrack-js GitHub star history and stats - based on JavaScript only!
-https://seladb.github.io/StarTrack-js/
-elliotreborn/github-stars 技术栈的 star 趋势数据
- Github PR 统计 开源相关工作岗位 t9tio/open-source-jobs
-A list of Open Source projects offering jobs.</description>
+      <description>2020 年 4 月 11 日（星期六） 今日待办  Istio Handbook 周报  周一发布到钉钉群     编程 架构设计 HA 高可用 High Availability
+LB 负载均衡 Load Balance
+产品设计 POC 概念验证 Proof Of Concept
+MVP 最小化可行产品 Minimum Viable Product
+需求管理 KANO 模型 价值 vs 复杂度矩阵 分布式一致性 Paxos Paxos https://raft.github.io
+由于 Paxos 难以理解，所以才有了 Raft
+Raft 以可理解性和易于实现为目标：
+ Leader 选举（Leader election） 日志同步（Log replication） 安全性（Safety） 日志压缩（Log compaction） 成员变更（Membership change）  shell top htop
+brew install htop</description>
     </item>
     
     <item>
@@ -32,7 +32,8 @@ A list of Open Source projects offering jobs.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/10/</guid>
-      <description>2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   生活  编程 mosquitto (mqtt) 收到数据： &#39;{&amp;quot;applicationID&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;applicationName&amp;quot;:&amp;quot;0000000000000001&amp;quot;,&amp;quot;deviceName&amp;quot;:&amp;quot;d143-K5-out&amp;quot;,&amp;quot;devEUI&amp;quot;:&amp;quot;ffffff100000d143&amp;quot;,&amp;quot;txInfo&amp;quot;:{&amp;quot;frequency&amp;quot;:481700000,&amp;quot;dr&amp;quot;:2},&amp;quot;adr&amp;quot;:false,&amp;quot;fCnt&amp;quot;:68570,&amp;quot;fPort&amp;quot;:44,&amp;quot;data&amp;quot;:&amp;quot;BQEA&amp;quot;}&#39; topic: &#39;application/1/device/ffffff100000d143/rx&#39; 解析后发布到 IoT-Hub： {&amp;quot;reported&amp;quot;:{&amp;quot;alarmStatus&amp;quot;:&amp;quot;warning&amp;quot;,&amp;quot;frameType&amp;quot;:1,&amp;quot;sensorType&amp;quot;:5}} mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic shirpOpts.</description>
+      <description>2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   编程 mosquitto (mqtt) mosquitto_pub mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic mosquitto_pub -t &amp;lsquo;application/1/device/ffffff100000d143/rx&amp;rsquo; -m &amp;lsquo;{&amp;ldquo;applicationID&amp;rdquo;:&amp;ldquo;1&amp;rdquo;,&amp;ldquo;applicationName&amp;rdquo;:&amp;ldquo;0000000000000001&amp;rdquo;,&amp;ldquo;deviceName&amp;rdquo;:&amp;ldquo;d143-K5-out&amp;rdquo;,&amp;ldquo;devEUI&amp;rdquo;:&amp;ldquo;ffffff100000d143&amp;rdquo;,&amp;ldquo;txInfo&amp;rdquo;:{&amp;ldquo;frequency&amp;rdquo;:481700000,&amp;ldquo;dr&amp;rdquo;:2},&amp;ldquo;adr&amp;rdquo;:false,&amp;ldquo;fCnt&amp;rdquo;:68570,&amp;ldquo;fPort&amp;rdquo;:44,&amp;ldquo;data&amp;rdquo;:&amp;ldquo;BQEA&amp;rdquo;}&amp;rsquo;
+mosquitto_sub mosquitto_sub -t &amp;lsquo;application/1/device/ffffff100000d143/rx&amp;rsquo;</description>
     </item>
     
     <item>
@@ -41,7 +42,7 @@ A list of Open Source projects offering jobs.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/diary/docs/2020/04/09/</guid>
-      <description>2020 年 4 月 9 日（星期四） 今日待办     生活  编程 基本算法 排序算法  插入排序类  直接插入排序 希尔排序 二分法插入排序   选择排序类  直接选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序 基数排序  时间 / 空间复杂度 排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。
+      <description>2020 年 4 月 9 日（星期四） 今日待办  编程  熟悉基本算法  排序算法（时间 / 空间复杂度） 大数据查找 / 排序   CORS     编程 基本算法 排序算法  插入排序类  直接插入排序 希尔排序 二分法插入排序   选择排序类  直接选择排序 堆排序   交换排序类  冒泡排序 快速排序   归并排序 基数排序  时间 / 空间复杂度 排序大的分类可分为内排序和外排序，不需要访问外存就能进行排序的叫做内排序。
    排序方法 时间复杂度（平均） 时间复杂度（最坏) 时间复杂度（最好) 空间复杂度 稳定性 复杂性     希尔排序 O(nlog2n) O(n2) O(n) O(1) 不稳定 较复杂   堆排序 O(nlog2n) O(nlog2n) O(nlog2n) O(1) 不稳定 较复杂   快速排序 O(nlog2n) O(n2) O(nlog2n) O(nlog2n) 不稳定 较复杂   归并排序 O(nlog2n) O(nlog2n) O(nlog2n) O(n) 稳定 较复杂   直接插入排序 O(n2) O(n2) O(n) O(1) 稳定 简单   直接选择排序 O(n2) O(n2) O(n2) O(1) 不稳定 简单   冒泡排序 O(n2) O(n2) O(n) O(1) 稳定 简单   基数排序 O(d(n+r)) O(d(n+r)) O(d(n+r)) O(n+r) 稳定 较复杂    稳定排序与不稳定排序 稳定排序：假设在待排序的文件中，存在两个或两个以上的记录具有相同的关键字，在用某种排序法排序后，若这些相同关键字的元素的相对次序仍然不变，则这种排序方法是稳定的。</description>
     </item>
     

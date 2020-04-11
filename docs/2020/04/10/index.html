@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="2020-04-10"><meta property="og:title" content="2020-04-10" />
-<meta property="og:description" content="2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   生活  编程 mosquitto (mqtt) 收到数据： &#39;{&quot;applicationID&quot;:&quot;1&quot;,&quot;applicationName&quot;:&quot;0000000000000001&quot;,&quot;deviceName&quot;:&quot;d143-K5-out&quot;,&quot;devEUI&quot;:&quot;ffffff100000d143&quot;,&quot;txInfo&quot;:{&quot;frequency&quot;:481700000,&quot;dr&quot;:2},&quot;adr&quot;:false,&quot;fCnt&quot;:68570,&quot;fPort&quot;:44,&quot;data&quot;:&quot;BQEA&quot;}&#39; topic: &#39;application/1/device/ffffff100000d143/rx&#39; 解析后发布到 IoT-Hub： {&quot;reported&quot;:{&quot;alarmStatus&quot;:&quot;warning&quot;,&quot;frameType&quot;:1,&quot;sensorType&quot;:5}} mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic shirpOpts." />
+<meta property="og:description" content="2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   编程 mosquitto (mqtt) mosquitto_pub mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;
+mosquitto_sub mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/diary/docs/2020/04/10/" />
-<meta property="article:modified_time" content="2020-04-11T00:04:51+08:00" />
+<meta property="article:modified_time" content="2020-04-11T16:57:35+08:00" />
 <title>2020-04-10 | 叶王日记</title>
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
@@ -16,7 +17,7 @@
 <link rel="stylesheet" href="/diary/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/diary/en.search.min.6b991ab7ad21d5574f00499e3533c4dfaeba6c9dbefdcc2526919ea159c697aa.js" integrity="sha256-a5kat60h1VdPAEmeNTPE3666bJ2&#43;/cwlJpGeoVnGl6o="></script>
+<script defer src="/diary/en.search.min.e7bf6fd90d3cacd6ab21075349d7db79a80ec5384f75304fccdeb254d145ed54.js" integrity="sha256-579v2Q08rNarIQdTSdfbeagOxThPdTBPzN6yVNFF7VQ="></script>
 
 <!--
 Made with Book Theme
@@ -301,40 +302,32 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
       <ul>
         <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">生活</a></li>
-        <li><a href="#heading-2">编程</a>
+        <li><a href="#heading-1">编程</a>
           <ul>
-            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a></li>
-            <li><a href="#alarmstatus">alarmStatus</a></li>
-            <li><a href="#frametype">frametype</a></li>
-            <li><a href="#sensortype">sensorType</a></li>
-            <li><a href="#heading-3">星物</a></li>
-            <li><a href="#heading-4">排期</a>
+            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
               <ul>
-                <li><a href="#ote-30">OTE 3.0</a></li>
-                <li><a href="#heading-5">星物</a></li>
-                <li><a href="#heading-6">星视</a></li>
-                <li><a href="#heading-7">星智</a></li>
+                <li><a href="#mosquitto-pub">mosquitto_pub</a></li>
+                <li><a href="#mosquitto-sub">mosquitto_sub</a></li>
+              </ul>
+            </li>
+            <li><a href="#github">Github</a>
+              <ul>
+                <li><a href="#github-star-">Github star 历史</a>
+                  <ul>
+                    <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history">timqian/star-history</a></li>
+                    <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics">vesoft-inc/github-statistics</a></li>
+                    <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark">antonmedv/spark</a></li>
+                    <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js">seladb/startrack-js</a></li>
+                    <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars">elliotreborn/github-stars</a></li>
+                  </ul>
+                </li>
+                <li><a href="#github-pr-">Github PR 统计</a></li>
+                <li><a href="#heading-2">开源相关工作岗位</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#heading-8">书影音</a>
-          <ul>
-            <li><a href="#heading-9">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-10">数学</a></li>
-        <li><a href="#heading-11">语言</a></li>
-        <li><a href="#heading-12">政史地</a></li>
-        <li><a href="#heading-13">物化生</a></li>
-        <li><a href="#heading-14">娱乐</a>
-          <ul>
-            <li><a href="#heading-15">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-16">其他</a></li>
-        <li><a href="#heading-17">今日总结</a></li>
+        <li><a href="#heading-3">今日总结</a></li>
       </ul>
     </li>
   </ul>
@@ -354,98 +347,41 @@ https://github.com/alex-shpak/hugo-book
 <li><input disabled="" type="checkbox"><a href="https://github.com/servicemesher/istio-handbook">Istio Handbook</a> 编委会双周会 21:00-22:00</li>
 </ul>
 <hr>
-<h2 id="heading-1">生活</h2>
-<hr>
-<h2 id="heading-2">编程</h2>
+<h2 id="heading-1">编程</h2>
 <h3 id="mosquitto-mqtt">mosquitto (mqtt)</h3>
-<pre><code>收到数据： '{&quot;applicationID&quot;:&quot;1&quot;,&quot;applicationName&quot;:&quot;0000000000000001&quot;,&quot;deviceName&quot;:&quot;d143-K5-out&quot;,&quot;devEUI&quot;:&quot;ffffff100000d143&quot;,&quot;txInfo&quot;:{&quot;frequency&quot;:481700000,&quot;dr&quot;:2},&quot;adr&quot;:false,&quot;fCnt&quot;:68570,&quot;fPort&quot;:44,&quot;data&quot;:&quot;BQEA&quot;}' topic: 'application/1/device/ffffff100000d143/rx'
-解析后发布到 IoT-Hub： {&quot;reported&quot;:{&quot;alarmStatus&quot;:&quot;warning&quot;,&quot;frameType&quot;:1,&quot;sensorType&quot;:5}}
-</code></pre><pre><code>mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic
-</code></pre><p>shirpOpts.AddBroker(&ldquo;tcp://localhost:1883&rdquo;)
-st := shirpStackClient.Subscribe(&ldquo;application/#&quot;, 0, msgHandle)</p>
-<p>payload := msg.Payload()
-topic := msg.Topic()
-fmt.Printf(&ldquo;收到数据： &lsquo;%s&rsquo; topic: &lsquo;%s&rsquo;\n&rdquo;, payload, topic)</p>
-<p>mosquitto_pub -t topic01 -m &ldquo;test msg&rdquo;
-mosquitto_sub -t topic01</p>
-<h3 id="alarmstatus">alarmStatus</h3>
-<p>warning</p>
-<h3 id="frametype">frametype</h3>
-<p>只有两种，1 和 0</p>
-<p>frameType=0 表示是心跳帧
-frameType=1 表示是传感器数据</p>
-<h3 id="sensortype">sensorType</h3>
-<p>sensorType=5 这个应该是对应光栅这种传感器</p>
-<p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
-<p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
+<h4 id="mosquitto-pub">mosquitto_pub</h4>
+<pre><code>mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic
+</code></pre><p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
+<h4 id="mosquitto-sub">mosquitto_sub</h4>
 <p>mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;</p>
-<h3 id="heading-3">星物</h3>
-<p>这周会完成红外光栅应用统计的开发（订阅，解码，统计）。
-还剩下</p>
-<ol>
-<li>LoRa 后台权限改造</li>
-<li>应用统计数据接入到 LoRa 后台（统计数据存储到 LoRa 后台，并增加相应 web api）</li>
-<li>产品前后端开发</li>
-<li>前后端联调</li>
-</ol>
-<h3 id="heading-4">排期</h3>
-<h4 id="ote-30">OTE 3.0</h4>
-<p>kubeovn 调研</p>
-<h4 id="heading-5">星物</h4>
-<ol>
-<li>LoRa 后台权限改造</li>
-<li>应用统计 api</li>
-<li>前后端联调</li>
-</ol>
-<h4 id="heading-6">星视</h4>
-<ol>
-<li>onvif 联调</li>
-<li>gb28181 标准调研 1 周</li>
-<li>方案选型 exosip, pjsip 验证 1 周</li>
-<li>gb28181 开发 1 周</li>
-<li>gb28181 优化 1 周</li>
-<li>webrtc 调研</li>
-<li>H264, H265</li>
-<li>【低】模拟 / 数字摄像头的视频流获取方案</li>
-<li>【星视 算子对接讨论】</li>
-</ol>
-<h4 id="heading-7">星智</h4>
-<ol>
-<li>算子接入</li>
-<li>限流，熔断开发 1.5 周</li>
-<li>网关统计指标只统计算子 3 天</li>
-</ol>
-<p>4.17 onvif 联调，算子接入（人体检测与属性识别），LoRa 后台权限，LoRa 应用统计 api
-4.24 LoRa 前后端联调，gb28181 标准调研，【星视 算子对接讨论】
-5.1 方案选型 exosip, pjsip 验证
-5.8 gb28181 开发
-5.15 webrtc 调研
-5.22 网关统计指标只统计算子，【kubeovn 调研】
-5.29 限流熔断开发，gb28181 优化
-6.5 限流熔断开发
-6.12 算子接入，H264, H265 。。。</p>
-<p>9 周</p>
 <hr>
-<p>6.26
-7.3</p>
+<h3 id="github">Github</h3>
+<h4 id="github-star-">Github star 历史</h4>
+<h5 id="timqianstar-historyhttpsgithubcomtimqianstar-history"><a href="https://github.com/timqian/star-history">timqian/star-history</a></h5>
+<p><img src="https://img.shields.io/github/stars/timqian/star-history.svg" alt="Github stars"></p>
+<p><a href="https://star-history.t9t.io/">https://star-history.t9t.io/</a></p>
+<h5 id="vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics"><a href="https://github.com/vesoft-inc/github-statistics">vesoft-inc/github-statistics</a></h5>
+<p><img src="https://img.shields.io/github/stars/vesoft-inc/github-statistics.svg" alt="Github stars"></p>
+<p>A react static app for displaying github repo statistiscs like Star History, Fork History and more.</p>
+<p><a href="https://vesoft-inc.github.io/github-statistics/">https://vesoft-inc.github.io/github-statistics/</a></p>
+<h5 id="antonmedvsparkhttpsgithubcomantonmedvspark"><a href="https://github.com/antonmedv/spark">antonmedv/spark</a></h5>
+<p><img src="https://img.shields.io/github/stars/antonmedv/spark.svg" alt="Github stars"></p>
+<p><a href="https://stars.medv.io/servicemesher/istio-handbook"><img src="https://stars.medv.io/servicemesher/istio-handbook.svg" alt="GitHub Star Sparkline"></a></p>
+<h5 id="seladbstartrack-jshttpsgithubcomseladbstartrack-js"><a href="https://github.com/seladb/startrack-js">seladb/startrack-js</a></h5>
+<p><img src="https://img.shields.io/github/stars/seladb/startrack-js.svg" alt="Github stars"></p>
+<p>GitHub star history and stats - based on JavaScript only!</p>
+<p><a href="https://seladb.github.io/StarTrack-js/">https://seladb.github.io/StarTrack-js/</a></p>
+<h5 id="elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars"><a href="https://github.com/elliotreborn/github-stars">elliotreborn/github-stars</a></h5>
+<p><img src="https://img.shields.io/github/stars/elliotreborn/github-stars.svg" alt="Github stars"></p>
+<p>技术栈的 star 趋势数据</p>
 <hr>
-<h2 id="heading-8">书影音</h2>
-<h3 id="heading-9">电影</h3>
+<h4 id="github-pr-">Github PR 统计</h4>
+<h4 id="heading-2">开源相关工作岗位</h4>
+<p><a href="https://github.com/t9tio/open-source-jobs">t9tio/open-source-jobs</a></p>
+<p><img src="https://img.shields.io/github/stars/t9tio/open-source-jobs.svg" alt="Github stars"></p>
+<p>A list of Open Source projects offering jobs. <a href="https://oo.t9t.io/organizations">https://oo.t9t.io/organizations</a></p>
 <hr>
-<h2 id="heading-10">数学</h2>
-<hr>
-<h2 id="heading-11">语言</h2>
-<hr>
-<h2 id="heading-12">政史地</h2>
-<hr>
-<h2 id="heading-13">物化生</h2>
-<hr>
-<h2 id="heading-14">娱乐</h2>
-<h3 id="heading-15">游戏</h3>
-<hr>
-<h2 id="heading-16">其他</h2>
-<hr>
-<h2 id="heading-17">今日总结</h2>
+<h2 id="heading-3">今日总结</h2>
 </article>
  
       
@@ -458,7 +394,7 @@ frameType=1 表示是传感器数据</p>
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/note/commit/ae07fa69c19646202657f20496539889d668c7d6" title='Last modified by yewang | 2020-04-11' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/note/commit/1b1a8748fcd478a4dce3766cdd840d407b182487" title='Last modified by yewang | 2020-04-11' target="_blank" rel="noopener">
       <img src="/diary/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-11</span>
     </a>
@@ -497,40 +433,32 @@ frameType=1 表示是传感器数据</p>
     <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
       <ul>
         <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">生活</a></li>
-        <li><a href="#heading-2">编程</a>
+        <li><a href="#heading-1">编程</a>
           <ul>
-            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a></li>
-            <li><a href="#alarmstatus">alarmStatus</a></li>
-            <li><a href="#frametype">frametype</a></li>
-            <li><a href="#sensortype">sensorType</a></li>
-            <li><a href="#heading-3">星物</a></li>
-            <li><a href="#heading-4">排期</a>
+            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
               <ul>
-                <li><a href="#ote-30">OTE 3.0</a></li>
-                <li><a href="#heading-5">星物</a></li>
-                <li><a href="#heading-6">星视</a></li>
-                <li><a href="#heading-7">星智</a></li>
+                <li><a href="#mosquitto-pub">mosquitto_pub</a></li>
+                <li><a href="#mosquitto-sub">mosquitto_sub</a></li>
+              </ul>
+            </li>
+            <li><a href="#github">Github</a>
+              <ul>
+                <li><a href="#github-star-">Github star 历史</a>
+                  <ul>
+                    <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history">timqian/star-history</a></li>
+                    <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics">vesoft-inc/github-statistics</a></li>
+                    <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark">antonmedv/spark</a></li>
+                    <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js">seladb/startrack-js</a></li>
+                    <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars">elliotreborn/github-stars</a></li>
+                  </ul>
+                </li>
+                <li><a href="#github-pr-">Github PR 统计</a></li>
+                <li><a href="#heading-2">开源相关工作岗位</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#heading-8">书影音</a>
-          <ul>
-            <li><a href="#heading-9">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-10">数学</a></li>
-        <li><a href="#heading-11">语言</a></li>
-        <li><a href="#heading-12">政史地</a></li>
-        <li><a href="#heading-13">物化生</a></li>
-        <li><a href="#heading-14">娱乐</a>
-          <ul>
-            <li><a href="#heading-15">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-16">其他</a></li>
-        <li><a href="#heading-17">今日总结</a></li>
+        <li><a href="#heading-3">今日总结</a></li>
       </ul>
     </li>
   </ul>
