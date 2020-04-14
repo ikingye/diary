@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="2020-04-13"><meta property="og:title" content="2020-04-13" />
+<meta name="description" content="2020 年 4 月 13 日（星期一） 今日待办     编程 Git Git submodule merge vs squash vs rebase merge 不能保持 master 分支干净，但是保持了所有的 commit history，大多数情况下都是不好的，个别情况挺好 squash 也可以保持 master 分支干净，但是 master 中 author 都是 maintainer，而不是原 owner rebase 可以尽可能保持 master 分支干净整洁，并且易于识别 author
+squash merge # 切换到目标分支 $ git checkout master # 以 squash 的形式 merge $ git merge --squash devel # it does not produce a commit right away: you need an additional commit $ git commit -m &#34;squash branch&#34;  你会发现，在 master 分支上居然有未提交的修改，然后你就需要在 master 上主动提交了修改， 注意，这里是你 commit 的，也就是改变了 commit 的 author。 git merge has a &ndash;commit option, but it cannot be used with &ndash;squash."><meta property="og:title" content="2020-04-13" />
 <meta property="og:description" content="2020 年 4 月 13 日（星期一） 今日待办     编程 Git Git submodule merge vs squash vs rebase merge 不能保持 master 分支干净，但是保持了所有的 commit history，大多数情况下都是不好的，个别情况挺好 squash 也可以保持 master 分支干净，但是 master 中 author 都是 maintainer，而不是原 owner rebase 可以尽可能保持 master 分支干净整洁，并且易于识别 author
 squash merge # 切换到目标分支 $ git checkout master # 以 squash 的形式 merge $ git merge --squash devel # it does not produce a commit right away: you need an additional commit $ git commit -m &#34;squash branch&#34;  你会发现，在 master 分支上居然有未提交的修改，然后你就需要在 master 上主动提交了修改， 注意，这里是你 commit 的，也就是改变了 commit 的 author。 git merge has a &ndash;commit option, but it cannot be used with &ndash;squash." />
 <meta property="og:type" content="article" />
@@ -14,10 +15,10 @@ squash merge # 切换到目标分支 $ git checkout master # 以 squash 的形�
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/diary/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
+<link rel="stylesheet" href="/diary/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/diary/en.search.min.5339bbb48ec81f1e75f7d2bedd8fc427d28ab070b48f56d306f6b226baf4b197.js" integrity="sha256-Uzm7tI7IHx5199K&#43;3Y/EJ9KKsHC0j1bTBvayJrr0sZc="></script>
+<script defer src="/diary/en.search.min.b27a3930c9ca4b7fd4e5879a67efd3d6977e19089e4d146e2f062bf9bb87cd52.js" integrity="sha256-sno5MMnKS3/U5YeaZ&#43;/T1pd&#43;GQieTRRuLwYr&#43;buHzVI="></script>
 
 <!--
 Made with Book Theme
@@ -47,6 +48,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+<ul>
+  <li><a href="kingye.me">博客</a></li>
+  <li><a href="https://github.com/ikingye">Github</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip">知乎</a></li>
+  <li><a href="https://weibo.com/kingyip15215">微博</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
 
 
   
@@ -71,16 +85,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/" >
-      2020 年
-  </a>
+  
+  <a href="/diary/docs/2020/" class="">2020 年</a>
+  
 
-
-    
 
     
 
@@ -93,16 +104,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/04/" >
-      4 月
-  </a>
+  
+  <a href="/diary/docs/2020/04/" class="">4 月</a>
+  
 
-
-    
 
     
 
@@ -115,9 +123,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/14/" >
-      2020-04-14
-  </a>
+  
+  <a href="/diary/docs/2020/04/14/" class="">2020-04-14</a>
+  
 
 </li>
       
@@ -125,9 +133,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/13/"  class="active">
-      2020-04-13
-  </a>
+  
+  <a href="/diary/docs/2020/04/13/" class="active">2020-04-13</a>
+  
 
 </li>
       
@@ -135,9 +143,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/12/" >
-      2020-04-12
-  </a>
+  
+  <a href="/diary/docs/2020/04/12/" class="">2020-04-12</a>
+  
 
 </li>
       
@@ -145,9 +153,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/11/" >
-      2020-04-11
-  </a>
+  
+  <a href="/diary/docs/2020/04/11/" class="">2020-04-11</a>
+  
 
 </li>
       
@@ -155,9 +163,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/10/" >
-      2020-04-10
-  </a>
+  
+  <a href="/diary/docs/2020/04/10/" class="">2020-04-10</a>
+  
 
 </li>
       
@@ -165,9 +173,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/09/" >
-      2020-04-09
-  </a>
+  
+  <a href="/diary/docs/2020/04/09/" class="">2020-04-09</a>
+  
 
 </li>
       
@@ -175,9 +183,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/08/" >
-      2020-04-08
-  </a>
+  
+  <a href="/diary/docs/2020/04/08/" class="">2020-04-08</a>
+  
 
 </li>
       
@@ -185,9 +193,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/07/" >
-      2020-04-07
-  </a>
+  
+  <a href="/diary/docs/2020/04/07/" class="">2020-04-07</a>
+  
 
 </li>
       
@@ -195,9 +203,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/06/" >
-      2020-04-06
-  </a>
+  
+  <a href="/diary/docs/2020/04/06/" class="">2020-04-06</a>
+  
 
 </li>
       
@@ -205,9 +213,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/03/" >
-      2020-04-03
-  </a>
+  
+  <a href="/diary/docs/2020/04/03/" class="">2020-04-03</a>
+  
 
 </li>
       
@@ -215,9 +223,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/02/" >
-      2020-04-02
-  </a>
+  
+  <a href="/diary/docs/2020/04/02/" class="">2020-04-02</a>
+  
 
 </li>
       
@@ -235,16 +243,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/03/" >
-      3 月
-  </a>
+  
+  <a href="/diary/docs/2020/03/" class="collapsed ">3 月</a>
+  
 
-
-    
 
     
 
@@ -274,6 +279,11 @@ https://github.com/alex-shpak/hugo-book
 
 
   
+
+
+
+
+
 
 
 
@@ -318,63 +328,59 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#2020--4--13-">2020 年 4 月 13 日（星期一）</a>
+    <li><a href="#今日待办">今日待办</a></li>
+    <li><a href="#编程">编程</a>
       <ul>
-        <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">编程</a>
+        <li><a href="#git">Git</a>
           <ul>
-            <li><a href="#git">Git</a>
+            <li><a href="#git-submodule">Git submodule</a></li>
+            <li><a href="#merge-vs-squash-vs-rebase">merge vs squash vs rebase</a>
               <ul>
-                <li><a href="#git-submodule">Git submodule</a></li>
-                <li><a href="#merge-vs-squash-vs-rebase">merge vs squash vs rebase</a>
-                  <ul>
-                    <li><a href="#squash-merge">squash merge</a></li>
-                    <li><a href="#rebase-merge">rebase merge</a></li>
-                  </ul>
-                </li>
-                <li><a href="#-git-commit">合并 git commit</a></li>
+                <li><a href="#squash-merge">squash merge</a></li>
+                <li><a href="#rebase-merge">rebase merge</a></li>
               </ul>
             </li>
-            <li><a href="#cdn">CDN</a>
+            <li><a href="#合并-git-commit">合并 git commit</a></li>
+          </ul>
+        </li>
+        <li><a href="#cdn">CDN</a>
+          <ul>
+            <li><a href="#cdn-的基本思路">CDN 的基本思路</a></li>
+            <li><a href="#cdn-解决的问题">CDN 解决的问题</a></li>
+            <li><a href="#cdn-的组成部分">CDN 的组成部分</a></li>
+          </ul>
+        </li>
+        <li><a href="#apm">APM</a></li>
+        <li><a href="#gmv">GMV</a></li>
+        <li><a href="#算法">算法</a>
+          <ul>
+            <li><a href="#乘积最大的数组平分方式">乘积最大的数组平分方式</a>
               <ul>
-                <li><a href="#cdn-">CDN 的基本思路</a></li>
-                <li><a href="#cdn--1">CDN 解决的问题</a></li>
-                <li><a href="#cdn--2">CDN 的组成部分</a></li>
+                <li><a href="#分析">分析</a></li>
+                <li><a href="#题解">题解</a></li>
               </ul>
             </li>
-            <li><a href="#apm">APM</a></li>
-            <li><a href="#gmv">GMV</a></li>
-            <li><a href="#heading-2">算法</a>
-              <ul>
-                <li><a href="#heading-3">乘积最大的数组平分方式</a>
-                  <ul>
-                    <li><a href="#heading-4">分析</a></li>
-                    <li><a href="#heading-5">题解</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#-url--url-">设计长 URL 转短 URL 的服务</a></li>
           </ul>
         </li>
-        <li><a href="#heading-6">书影音</a>
-          <ul>
-            <li><a href="#heading-7">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-8">语言文化</a></li>
-        <li><a href="#heading-9">数学</a></li>
-        <li><a href="#heading-10">政经法史地</a></li>
-        <li><a href="#heading-11">物化生</a></li>
-        <li><a href="#heading-12">娱乐</a>
-          <ul>
-            <li><a href="#heading-13">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-14">生活</a></li>
-        <li><a href="#heading-15">今日总结</a></li>
+        <li><a href="#设计长-url-转短-url-的服务">设计长 URL 转短 URL 的服务</a></li>
       </ul>
     </li>
+    <li><a href="#书影音">书影音</a>
+      <ul>
+        <li><a href="#电影">电影</a></li>
+      </ul>
+    </li>
+    <li><a href="#语言文化">语言文化</a></li>
+    <li><a href="#数学">数学</a></li>
+    <li><a href="#政经法史地">政经法史地</a></li>
+    <li><a href="#物化生">物化生</a></li>
+    <li><a href="#娱乐">娱乐</a>
+      <ul>
+        <li><a href="#游戏">游戏</a></li>
+      </ul>
+    </li>
+    <li><a href="#生活">生活</a></li>
+    <li><a href="#今日总结">今日总结</a></li>
   </ul>
 </nav>
 
@@ -385,13 +391,14 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="2020--4--13-">2020 年 4 月 13 日（星期一）</h1>
-<h2 id="heading">今日待办</h2>
+      
+  <article class="markdown"><h1 id="2020-年-4-月-13-日星期一">2020 年 4 月 13 日（星期一）</h1>
+<h2 id="今日待办">今日待办</h2>
 <ul>
 <li><input disabled="" type="checkbox"></li>
 </ul>
 <hr>
-<h2 id="heading-1">编程</h2>
+<h2 id="编程">编程</h2>
 <h3 id="git">Git</h3>
 <h4 id="git-submodule">Git submodule</h4>
 <h4 id="merge-vs-squash-vs-rebase">merge vs squash vs rebase</h4>
@@ -443,7 +450,7 @@ $ git merge
 <li>然后我们就得到了一个从公共 commit 到现在的单个 commit</li>
 <li>这个时候别人将我们这个 commit 合并到 master 也只会在 master 上留下一个 commit 记录</li>
 </ul>
-<h4 id="-git-commit">合并 git commit</h4>
+<h4 id="合并-git-commit">合并 git commit</h4>
 <p>参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/2302736/trimming-git-commits-squashing-git-history">Trimming Git Commits/Squashing Git History</a></li>
@@ -451,7 +458,7 @@ $ git merge
 <hr>
 <h3 id="cdn">CDN</h3>
 <p>CDN：Content Delivery Network 内容分发网络</p>
-<h4 id="cdn-">CDN 的基本思路</h4>
+<h4 id="cdn-的基本思路">CDN 的基本思路</h4>
 <ul>
 <li>尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，</li>
 <li>使内容传输的更快、更稳定。</li>
@@ -459,7 +466,7 @@ $ git merge
 <li>CDN 实时根据网络流量以及各节点的连接、负载状况以及到用户的距离和响应时间等综合信息</li>
 <li>重新导向用户的请求到最近的服务节点上</li>
 </ul>
-<h4 id="cdn--1">CDN 解决的问题</h4>
+<h4 id="cdn-解决的问题">CDN 解决的问题</h4>
 <ul>
 <li>解决高流量、大并发</li>
 <li>解决南北互联问题</li>
@@ -468,7 +475,7 @@ $ git merge
 <li>提高网站的可用性</li>
 <li>防 DDoS（因为攻击被分配到了不同的物理服务器</li>
 </ul>
-<h4 id="cdn--2">CDN 的组成部分</h4>
+<h4 id="cdn-的组成部分">CDN 的组成部分</h4>
 <ul>
 <li>源站</li>
 <li>缓存服务器（核心缓存服务器 + 边缘缓存服务器）</li>
@@ -483,33 +490,34 @@ $ git merge
 <h3 id="gmv">GMV</h3>
 <p>GMV：Gross Merchandise Volume，是成交总额（一定时间段内）的意思。多用于电商行业，一般包含拍下未支付订单金额。</p>
 <hr>
-<h3 id="heading-2">算法</h3>
-<h4 id="heading-3">乘积最大的数组平分方式</h4>
+<h3 id="算法">算法</h3>
+<h4 id="乘积最大的数组平分方式">乘积最大的数组平分方式</h4>
 <p>一个长度为 N 的数组（N 一定为偶数个），将其平均分成两部分，找出能够使这两部分的和的乘积最大的数组平分方式</p>
-<h5 id="heading-4">分析</h5>
-<h5 id="heading-5">题解</h5>
+<h5 id="分析">分析</h5>
+<h5 id="题解">题解</h5>
 <hr>
-<h3 id="-url--url-">设计长 URL 转短 URL 的服务</h3>
+<h3 id="设计长-url-转短-url-的服务">设计长 URL 转短 URL 的服务</h3>
 <hr>
-<h2 id="heading-6">书影音</h2>
-<h3 id="heading-7">电影</h3>
+<h2 id="书影音">书影音</h2>
+<h3 id="电影">电影</h3>
 <hr>
-<h2 id="heading-8">语言文化</h2>
+<h2 id="语言文化">语言文化</h2>
 <hr>
-<h2 id="heading-9">数学</h2>
+<h2 id="数学">数学</h2>
 <hr>
-<h2 id="heading-10">政经法史地</h2>
+<h2 id="政经法史地">政经法史地</h2>
 <hr>
-<h2 id="heading-11">物化生</h2>
+<h2 id="物化生">物化生</h2>
 <hr>
-<h2 id="heading-12">娱乐</h2>
-<h3 id="heading-13">游戏</h3>
+<h2 id="娱乐">娱乐</h2>
+<h3 id="游戏">游戏</h3>
 <hr>
-<h2 id="heading-14">生活</h2>
+<h2 id="生活">生活</h2>
 <hr>
-<h2 id="heading-15">今日总结</h2>
+<h2 id="今日总结">今日总结</h2>
 </article>
  
+      
 
       <footer class="book-footer">
         
@@ -531,6 +539,9 @@ $ git merge
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 <script src="https://utteranc.es/client.js"
@@ -544,8 +555,8 @@ $ git merge
 </div>
   
  
-      </footer>
-      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
@@ -553,63 +564,59 @@ $ git merge
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#2020--4--13-">2020 年 4 月 13 日（星期一）</a>
+    <li><a href="#今日待办">今日待办</a></li>
+    <li><a href="#编程">编程</a>
       <ul>
-        <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">编程</a>
+        <li><a href="#git">Git</a>
           <ul>
-            <li><a href="#git">Git</a>
+            <li><a href="#git-submodule">Git submodule</a></li>
+            <li><a href="#merge-vs-squash-vs-rebase">merge vs squash vs rebase</a>
               <ul>
-                <li><a href="#git-submodule">Git submodule</a></li>
-                <li><a href="#merge-vs-squash-vs-rebase">merge vs squash vs rebase</a>
-                  <ul>
-                    <li><a href="#squash-merge">squash merge</a></li>
-                    <li><a href="#rebase-merge">rebase merge</a></li>
-                  </ul>
-                </li>
-                <li><a href="#-git-commit">合并 git commit</a></li>
+                <li><a href="#squash-merge">squash merge</a></li>
+                <li><a href="#rebase-merge">rebase merge</a></li>
               </ul>
             </li>
-            <li><a href="#cdn">CDN</a>
+            <li><a href="#合并-git-commit">合并 git commit</a></li>
+          </ul>
+        </li>
+        <li><a href="#cdn">CDN</a>
+          <ul>
+            <li><a href="#cdn-的基本思路">CDN 的基本思路</a></li>
+            <li><a href="#cdn-解决的问题">CDN 解决的问题</a></li>
+            <li><a href="#cdn-的组成部分">CDN 的组成部分</a></li>
+          </ul>
+        </li>
+        <li><a href="#apm">APM</a></li>
+        <li><a href="#gmv">GMV</a></li>
+        <li><a href="#算法">算法</a>
+          <ul>
+            <li><a href="#乘积最大的数组平分方式">乘积最大的数组平分方式</a>
               <ul>
-                <li><a href="#cdn-">CDN 的基本思路</a></li>
-                <li><a href="#cdn--1">CDN 解决的问题</a></li>
-                <li><a href="#cdn--2">CDN 的组成部分</a></li>
+                <li><a href="#分析">分析</a></li>
+                <li><a href="#题解">题解</a></li>
               </ul>
             </li>
-            <li><a href="#apm">APM</a></li>
-            <li><a href="#gmv">GMV</a></li>
-            <li><a href="#heading-2">算法</a>
-              <ul>
-                <li><a href="#heading-3">乘积最大的数组平分方式</a>
-                  <ul>
-                    <li><a href="#heading-4">分析</a></li>
-                    <li><a href="#heading-5">题解</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#-url--url-">设计长 URL 转短 URL 的服务</a></li>
           </ul>
         </li>
-        <li><a href="#heading-6">书影音</a>
-          <ul>
-            <li><a href="#heading-7">电影</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-8">语言文化</a></li>
-        <li><a href="#heading-9">数学</a></li>
-        <li><a href="#heading-10">政经法史地</a></li>
-        <li><a href="#heading-11">物化生</a></li>
-        <li><a href="#heading-12">娱乐</a>
-          <ul>
-            <li><a href="#heading-13">游戏</a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-14">生活</a></li>
-        <li><a href="#heading-15">今日总结</a></li>
+        <li><a href="#设计长-url-转短-url-的服务">设计长 URL 转短 URL 的服务</a></li>
       </ul>
     </li>
+    <li><a href="#书影音">书影音</a>
+      <ul>
+        <li><a href="#电影">电影</a></li>
+      </ul>
+    </li>
+    <li><a href="#语言文化">语言文化</a></li>
+    <li><a href="#数学">数学</a></li>
+    <li><a href="#政经法史地">政经法史地</a></li>
+    <li><a href="#物化生">物化生</a></li>
+    <li><a href="#娱乐">娱乐</a>
+      <ul>
+        <li><a href="#游戏">游戏</a></li>
+      </ul>
+    </li>
+    <li><a href="#生活">生活</a></li>
+    <li><a href="#今日总结">今日总结</a></li>
   </ul>
 </nav>
 

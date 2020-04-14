@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="2020-04-10"><meta property="og:title" content="2020-04-10" />
+<meta name="description" content="2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   编程 mosquitto (mqtt) mosquitto_pub mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;
+mosquitto_sub mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;"><meta property="og:title" content="2020-04-10" />
 <meta property="og:description" content="2020 年 4 月 10 日（星期五） 今日待办  Istio Handbook 编委会双周会 21:00-22:00   编程 mosquitto (mqtt) mosquitto_pub mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;
 mosquitto_sub mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;" />
 <meta property="og:type" content="article" />
@@ -14,10 +15,10 @@ mosquitto_sub mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&r
 <link rel="icon" href="/diary/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/diary/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
+<link rel="stylesheet" href="/diary/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/diary/en.search.min.5339bbb48ec81f1e75f7d2bedd8fc427d28ab070b48f56d306f6b226baf4b197.js" integrity="sha256-Uzm7tI7IHx5199K&#43;3Y/EJ9KKsHC0j1bTBvayJrr0sZc="></script>
+<script defer src="/diary/en.search.min.b27a3930c9ca4b7fd4e5879a67efd3d6977e19089e4d146e2f062bf9bb87cd52.js" integrity="sha256-sno5MMnKS3/U5YeaZ&#43;/T1pd&#43;GQieTRRuLwYr&#43;buHzVI="></script>
 
 <!--
 Made with Book Theme
@@ -47,6 +48,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+<ul>
+  <li><a href="kingye.me">博客</a></li>
+  <li><a href="https://github.com/ikingye">Github</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip">知乎</a></li>
+  <li><a href="https://weibo.com/kingyip15215">微博</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
 
 
   
@@ -71,16 +85,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/" >
-      2020 年
-  </a>
+  
+  <a href="/diary/docs/2020/" class="">2020 年</a>
+  
 
-
-    
 
     
 
@@ -93,16 +104,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/04/" >
-      4 月
-  </a>
+  
+  <a href="/diary/docs/2020/04/" class="">4 月</a>
+  
 
-
-    
 
     
 
@@ -115,9 +123,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/14/" >
-      2020-04-14
-  </a>
+  
+  <a href="/diary/docs/2020/04/14/" class="">2020-04-14</a>
+  
 
 </li>
       
@@ -125,9 +133,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/13/" >
-      2020-04-13
-  </a>
+  
+  <a href="/diary/docs/2020/04/13/" class="">2020-04-13</a>
+  
 
 </li>
       
@@ -135,9 +143,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/12/" >
-      2020-04-12
-  </a>
+  
+  <a href="/diary/docs/2020/04/12/" class="">2020-04-12</a>
+  
 
 </li>
       
@@ -145,9 +153,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/11/" >
-      2020-04-11
-  </a>
+  
+  <a href="/diary/docs/2020/04/11/" class="">2020-04-11</a>
+  
 
 </li>
       
@@ -155,9 +163,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/10/"  class="active">
-      2020-04-10
-  </a>
+  
+  <a href="/diary/docs/2020/04/10/" class="active">2020-04-10</a>
+  
 
 </li>
       
@@ -165,9 +173,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/09/" >
-      2020-04-09
-  </a>
+  
+  <a href="/diary/docs/2020/04/09/" class="">2020-04-09</a>
+  
 
 </li>
       
@@ -175,9 +183,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/08/" >
-      2020-04-08
-  </a>
+  
+  <a href="/diary/docs/2020/04/08/" class="">2020-04-08</a>
+  
 
 </li>
       
@@ -185,9 +193,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/07/" >
-      2020-04-07
-  </a>
+  
+  <a href="/diary/docs/2020/04/07/" class="">2020-04-07</a>
+  
 
 </li>
       
@@ -195,9 +203,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/06/" >
-      2020-04-06
-  </a>
+  
+  <a href="/diary/docs/2020/04/06/" class="">2020-04-06</a>
+  
 
 </li>
       
@@ -205,9 +213,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/03/" >
-      2020-04-03
-  </a>
+  
+  <a href="/diary/docs/2020/04/03/" class="">2020-04-03</a>
+  
 
 </li>
       
@@ -215,9 +223,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/diary/docs/2020/04/02/" >
-      2020-04-02
-  </a>
+  
+  <a href="/diary/docs/2020/04/02/" class="">2020-04-02</a>
+  
 
 </li>
       
@@ -235,16 +243,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/diary/docs/2020/03/" >
-      3 月
-  </a>
+  
+  <a href="/diary/docs/2020/03/" class="collapsed ">3 月</a>
+  
 
-
-    
 
     
 
@@ -274,6 +279,11 @@ https://github.com/alex-shpak/hugo-book
 
 
   
+
+
+
+
+
 
 
 
@@ -318,37 +328,33 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
+    <li><a href="#今日待办">今日待办</a></li>
+    <li><a href="#编程">编程</a>
       <ul>
-        <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">编程</a>
+        <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
           <ul>
-            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
-              <ul>
-                <li><a href="#mosquitto-pub">mosquitto_pub</a></li>
-                <li><a href="#mosquitto-sub">mosquitto_sub</a></li>
-              </ul>
-            </li>
-            <li><a href="#github">Github</a>
-              <ul>
-                <li><a href="#github-star-">Github star 历史</a>
-                  <ul>
-                    <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history">timqian/star-history</a></li>
-                    <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics">vesoft-inc/github-statistics</a></li>
-                    <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark">antonmedv/spark</a></li>
-                    <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js">seladb/startrack-js</a></li>
-                    <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars">elliotreborn/github-stars</a></li>
-                  </ul>
-                </li>
-                <li><a href="#github-pr-">Github PR 统计</a></li>
-                <li><a href="#heading-2">开源相关工作岗位</a></li>
-              </ul>
-            </li>
+            <li><a href="#mosquitto_pub">mosquitto_pub</a></li>
+            <li><a href="#mosquitto_sub">mosquitto_sub</a></li>
           </ul>
         </li>
-        <li><a href="#heading-3">今日总结</a></li>
+        <li><a href="#github">Github</a>
+          <ul>
+            <li><a href="#github-star-历史">Github star 历史</a>
+              <ul>
+                <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history"><a href="https://github.com/timqian/star-history">timqian/star-history</a></a></li>
+                <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics"><a href="https://github.com/vesoft-inc/github-statistics">vesoft-inc/github-statistics</a></a></li>
+                <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark"><a href="https://github.com/antonmedv/spark">antonmedv/spark</a></a></li>
+                <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js"><a href="https://github.com/seladb/startrack-js">seladb/startrack-js</a></a></li>
+                <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars"><a href="https://github.com/elliotreborn/github-stars">elliotreborn/github-stars</a></a></li>
+              </ul>
+            </li>
+            <li><a href="#github-pr-统计">Github PR 统计</a></li>
+            <li><a href="#开源相关工作岗位">开源相关工作岗位</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+    <li><a href="#今日总结">今日总结</a></li>
   </ul>
 </nav>
 
@@ -359,49 +365,51 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="2020--4--10-">2020 年 4 月 10 日（星期五）</h1>
-<h2 id="heading">今日待办</h2>
+      
+  <article class="markdown"><h1 id="2020-年-4-月-10-日星期五">2020 年 4 月 10 日（星期五）</h1>
+<h2 id="今日待办">今日待办</h2>
 <ul>
 <li><input disabled="" type="checkbox"><a href="https://github.com/servicemesher/istio-handbook">Istio Handbook</a> 编委会双周会 21:00-22:00</li>
 </ul>
 <hr>
-<h2 id="heading-1">编程</h2>
+<h2 id="编程">编程</h2>
 <h3 id="mosquitto-mqtt">mosquitto (mqtt)</h3>
-<h4 id="mosquitto-pub">mosquitto_pub</h4>
+<h4 id="mosquitto_pub">mosquitto_pub</h4>
 <pre><code>mosquitto_pub [-d] [-h hostname] [-i client_id] [-I client id prefix] [-p port number] [-q message QoS] [--quiet] [-r] { -f file | -l | -m message | -n | -s} [-u username [-P password] ] [ --will-topic topic [--will-payload payload] [--will-qos qos] [--will-retain] ] -t message-topic
 </code></pre><p>mosquitto_pub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo; -m &lsquo;{&ldquo;applicationID&rdquo;:&ldquo;1&rdquo;,&ldquo;applicationName&rdquo;:&ldquo;0000000000000001&rdquo;,&ldquo;deviceName&rdquo;:&ldquo;d143-K5-out&rdquo;,&ldquo;devEUI&rdquo;:&ldquo;ffffff100000d143&rdquo;,&ldquo;txInfo&rdquo;:{&ldquo;frequency&rdquo;:481700000,&ldquo;dr&rdquo;:2},&ldquo;adr&rdquo;:false,&ldquo;fCnt&rdquo;:68570,&ldquo;fPort&rdquo;:44,&ldquo;data&rdquo;:&ldquo;BQEA&rdquo;}&rsquo;</p>
-<h4 id="mosquitto-sub">mosquitto_sub</h4>
+<h4 id="mosquitto_sub">mosquitto_sub</h4>
 <p>mosquitto_sub -t &lsquo;application/1/device/ffffff100000d143/rx&rsquo;</p>
 <hr>
 <h3 id="github">Github</h3>
-<h4 id="github-star-">Github star 历史</h4>
+<h4 id="github-star-历史">Github star 历史</h4>
 <h5 id="timqianstar-historyhttpsgithubcomtimqianstar-history"><a href="https://github.com/timqian/star-history">timqian/star-history</a></h5>
-<p><img src="https://img.shields.io/github/stars/timqian/star-history.svg" alt="Github stars"></p>
+<p><img src="https://img.shields.io/github/stars/timqian/star-history.svg" alt="Github stars" /></p>
 <p><a href="https://star-history.t9t.io/">https://star-history.t9t.io/</a></p>
 <h5 id="vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics"><a href="https://github.com/vesoft-inc/github-statistics">vesoft-inc/github-statistics</a></h5>
-<p><img src="https://img.shields.io/github/stars/vesoft-inc/github-statistics.svg" alt="Github stars"></p>
+<p><img src="https://img.shields.io/github/stars/vesoft-inc/github-statistics.svg" alt="Github stars" /></p>
 <p>A react static app for displaying github repo statistiscs like Star History, Fork History and more.</p>
 <p><a href="https://vesoft-inc.github.io/github-statistics/">https://vesoft-inc.github.io/github-statistics/</a></p>
 <h5 id="antonmedvsparkhttpsgithubcomantonmedvspark"><a href="https://github.com/antonmedv/spark">antonmedv/spark</a></h5>
-<p><img src="https://img.shields.io/github/stars/antonmedv/spark.svg" alt="Github stars"></p>
-<p><a href="https://stars.medv.io/servicemesher/istio-handbook"><img src="https://stars.medv.io/servicemesher/istio-handbook.svg" alt="GitHub Star Sparkline"></a></p>
+<p><img src="https://img.shields.io/github/stars/antonmedv/spark.svg" alt="Github stars" /></p>
+<p><a href="https://stars.medv.io/servicemesher/istio-handbook"><img src="https://stars.medv.io/servicemesher/istio-handbook.svg" alt="GitHub Star Sparkline" /></a></p>
 <h5 id="seladbstartrack-jshttpsgithubcomseladbstartrack-js"><a href="https://github.com/seladb/startrack-js">seladb/startrack-js</a></h5>
-<p><img src="https://img.shields.io/github/stars/seladb/startrack-js.svg" alt="Github stars"></p>
+<p><img src="https://img.shields.io/github/stars/seladb/startrack-js.svg" alt="Github stars" /></p>
 <p>GitHub star history and stats - based on JavaScript only!</p>
 <p><a href="https://seladb.github.io/StarTrack-js/">https://seladb.github.io/StarTrack-js/</a></p>
 <h5 id="elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars"><a href="https://github.com/elliotreborn/github-stars">elliotreborn/github-stars</a></h5>
-<p><img src="https://img.shields.io/github/stars/elliotreborn/github-stars.svg" alt="Github stars"></p>
+<p><img src="https://img.shields.io/github/stars/elliotreborn/github-stars.svg" alt="Github stars" /></p>
 <p>技术栈的 star 趋势数据</p>
 <hr>
-<h4 id="github-pr-">Github PR 统计</h4>
-<h4 id="heading-2">开源相关工作岗位</h4>
+<h4 id="github-pr-统计">Github PR 统计</h4>
+<h4 id="开源相关工作岗位">开源相关工作岗位</h4>
 <p><a href="https://github.com/t9tio/open-source-jobs">t9tio/open-source-jobs</a></p>
-<p><img src="https://img.shields.io/github/stars/t9tio/open-source-jobs.svg" alt="Github stars"></p>
+<p><img src="https://img.shields.io/github/stars/t9tio/open-source-jobs.svg" alt="Github stars" /></p>
 <p>A list of Open Source projects offering jobs. <a href="https://oo.t9t.io/organizations">https://oo.t9t.io/organizations</a></p>
 <hr>
-<h2 id="heading-3">今日总结</h2>
+<h2 id="今日总结">今日总结</h2>
 </article>
  
+      
 
       <footer class="book-footer">
         
@@ -423,6 +431,9 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 <script src="https://utteranc.es/client.js"
@@ -436,8 +447,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
   
  
-      </footer>
-      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
@@ -445,37 +456,33 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#2020--4--10-">2020 年 4 月 10 日（星期五）</a>
+    <li><a href="#今日待办">今日待办</a></li>
+    <li><a href="#编程">编程</a>
       <ul>
-        <li><a href="#heading">今日待办</a></li>
-        <li><a href="#heading-1">编程</a>
+        <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
           <ul>
-            <li><a href="#mosquitto-mqtt">mosquitto (mqtt)</a>
-              <ul>
-                <li><a href="#mosquitto-pub">mosquitto_pub</a></li>
-                <li><a href="#mosquitto-sub">mosquitto_sub</a></li>
-              </ul>
-            </li>
-            <li><a href="#github">Github</a>
-              <ul>
-                <li><a href="#github-star-">Github star 历史</a>
-                  <ul>
-                    <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history">timqian/star-history</a></li>
-                    <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics">vesoft-inc/github-statistics</a></li>
-                    <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark">antonmedv/spark</a></li>
-                    <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js">seladb/startrack-js</a></li>
-                    <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars">elliotreborn/github-stars</a></li>
-                  </ul>
-                </li>
-                <li><a href="#github-pr-">Github PR 统计</a></li>
-                <li><a href="#heading-2">开源相关工作岗位</a></li>
-              </ul>
-            </li>
+            <li><a href="#mosquitto_pub">mosquitto_pub</a></li>
+            <li><a href="#mosquitto_sub">mosquitto_sub</a></li>
           </ul>
         </li>
-        <li><a href="#heading-3">今日总结</a></li>
+        <li><a href="#github">Github</a>
+          <ul>
+            <li><a href="#github-star-历史">Github star 历史</a>
+              <ul>
+                <li><a href="#timqianstar-historyhttpsgithubcomtimqianstar-history"><a href="https://github.com/timqian/star-history">timqian/star-history</a></a></li>
+                <li><a href="#vesoft-incgithub-statisticshttpsgithubcomvesoft-incgithub-statistics"><a href="https://github.com/vesoft-inc/github-statistics">vesoft-inc/github-statistics</a></a></li>
+                <li><a href="#antonmedvsparkhttpsgithubcomantonmedvspark"><a href="https://github.com/antonmedv/spark">antonmedv/spark</a></a></li>
+                <li><a href="#seladbstartrack-jshttpsgithubcomseladbstartrack-js"><a href="https://github.com/seladb/startrack-js">seladb/startrack-js</a></a></li>
+                <li><a href="#elliotreborngithub-starshttpsgithubcomelliotreborngithub-stars"><a href="https://github.com/elliotreborn/github-stars">elliotreborn/github-stars</a></a></li>
+              </ul>
+            </li>
+            <li><a href="#github-pr-统计">Github PR 统计</a></li>
+            <li><a href="#开源相关工作岗位">开源相关工作岗位</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+    <li><a href="#今日总结">今日总结</a></li>
   </ul>
 </nav>
 
